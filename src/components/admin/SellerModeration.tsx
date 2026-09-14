@@ -1,5 +1,189 @@
 "use client";
-import { useState } from "react"; import { AlertTriangle, Ban, CircleCheck, Send, ShieldAlert } from "lucide-react"; import { listings } from "@/lib/demo-data"; import { formatCurrency } from "@/lib/utils"; import { Button } from "@/components/ui/Button"; import { Badge } from "@/components/ui/Badge"; import { Card } from "@/components/ui/Card";
-type State="active"|"warned"|"suspended";
-const sellerRows=Object.values(Object.groupBy(listings,item=>item.farmer)).map(items=>({name:items![0].farmer,items:items!,average:Math.round(items!.reduce((sum,item)=>sum+item.price,0)/items!.length),flags:items!.filter(item=>item.price>item.suggested*1.08).length}));
-export function SellerModeration(){const [states,setStates]=useState<Record<string,State>>({});const set=(name:string,state:State)=>setStates(current=>({...current,[name]:state}));return <div className="mt-6 space-y-4">{sellerRows.map(seller=>{const state=states[seller.name]??"active";return <Card key={seller.name} className="p-5"><div className="flex flex-col justify-between gap-4 lg:flex-row"><div className="min-w-0"><div className="flex flex-wrap items-center gap-2"><h2 className="font-display text-xl font-bold">{seller.name}</h2>{state==="active"?<Badge tone={seller.flags?"amber":"emerald"}>{seller.flags?`${seller.flags} PRICE FLAGS`:"CLEAR"}</Badge>:<Badge tone={state==="warned"?"amber":"red"}>{state.toUpperCase()}</Badge>}</div><p className="mt-2 font-mono text-xs text-slate-500 dark:text-slate-400">{seller.items.length} listings · avg {formatCurrency(seller.average)}/unit</p><div className="mt-4 flex flex-wrap gap-2">{seller.items.map(item=><span key={item.id} className="rounded bg-stone-100 px-2 py-1 font-mono text-[11px] text-slate-700 dark:bg-slate-800 dark:text-slate-200">{item.variety} · {formatCurrency(item.price)} {item.price>item.suggested*1.08&&"↑"}</span>)}</div>{seller.flags>0&&<p className="mt-3 flex items-center gap-2 text-sm text-amber-800 dark:text-amber-300"><AlertTriangle size={16}/> Price is more than 8% above the regional baseline.</p>}</div><div className="flex shrink-0 flex-wrap items-center gap-2"><Button variant="outline" onClick={()=>set(seller.name,"warned")}><Send size={16}/> Warn</Button><Button variant="danger" onClick={()=>set(seller.name,"suspended")}><Ban size={16}/> Suspend</Button>{state!=="active"&&<Button variant="outline" onClick={()=>set(seller.name,"active")}><CircleCheck size={16}/> Restore</Button>}</div></div></Card>})}</div>}
+import { useState } from "react";
+import {
+  AlertTriangle,
+  Ban,
+  ChevronDown,
+  CircleCheck,
+  Send,
+  Undo2,
+} from "lucide-react";
+import { listings } from "@/lib/demo-data";
+import { formatCurrency } from "@/lib/utils";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Card } from "@/components/ui/Card";
+import type { Listing } from "@/types";
+
+type State = "active" | "warned" | "suspended";
+
+interface SellerRow {
+  name: string;
+  villages: string[];
+  items: Listing[];
+  average: number;
+  flags: number;
+}
+
+const sellerRows: SellerRow[] = Object.values(
+  Object.groupBy(listings, (item) => item.farmer),
+).map((items) => {
+  const list = items!;
+  return {
+    name: list[0].farmer,
+    villages: [...new Set(list.map((i) => i.village))],
+    items: list,
+    average: Math.round(list.reduce((sum, item) => sum + item.price, 0) / list.length),
+    flags: list.filter((item) => item.price > item.suggested * 1.08).length,
+  };
+});
+
+function diffPct(item: Listing): number {
+  return Math.round(((item.price - item.suggested) / item.suggested) * 100);
+}
+
+export function SellerModeration() {
+  const [states, setStates] = useState<Record<string, State>>({});
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+
+  const set = (name: string, state: State) =>
+    setStates((current) => ({ ...current, [name]: state }));
+  const toggleExpanded = (name: string) =>
+    setExpanded((current) => ({ ...current, [name]: !current[name] }));
+
+  return (
+    <div className="mt-6 space-y-4">
+      {sellerRows.map((seller) => {
+        const state = states[seller.name] ?? "active";
+        const open = expanded[seller.name] ?? false;
+        const suspended = state === "suspended";
+        const warned = state === "warned";
+        return (
+          <Card key={seller.name}>
+            {suspended && (
+              <p className="flex items-center gap-2 rounded-t-xl bg-red-700 px-5 py-2 text-xs font-bold text-white">
+                <Ban size={14} /> SUSPENDED — listings hidden from the marketplace
+              </p>
+            )}
+            {/* Clickable header: expands full selling details */}
+            <button
+              onClick={() => toggleExpanded(seller.name)}
+              aria-expanded={open}
+              className="flex w-full items-center gap-4 p-5 text-left"
+            >
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-emerald-700 font-display text-lg font-bold text-white">
+                {seller.name.charAt(0)}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="flex flex-wrap items-center gap-2">
+                  <span className="font-display text-xl font-bold">{seller.name}</span>
+                  {state === "active" ? (
+                    <Badge tone={seller.flags ? "amber" : "emerald"}>
+                      {seller.flags ? `${seller.flags} PRICE FLAGS` : "CLEAR"}
+                    </Badge>
+                  ) : (
+                    <Badge tone={warned ? "amber" : "red"}>{state.toUpperCase()}</Badge>
+                  )}
+                </span>
+                <span className="mt-1 block truncate font-mono text-xs text-slate-500 dark:text-neutral-400">
+                  {seller.villages.join(" · ")}
+                </span>
+                <span className="mt-1 block font-mono text-xs text-slate-500 dark:text-neutral-400">
+                  {seller.items.length} listings · avg {formatCurrency(seller.average)}/unit
+                  {" · "}click to {open ? "hide" : "see what they sell & at what price"}
+                </span>
+              </span>
+              <ChevronDown
+                size={20}
+                className={`shrink-0 text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            {/* Expanded selling details */}
+            {open && (
+              <div className="border-t border-stone-200 px-5 pb-5 dark:border-neutral-800">
+                {seller.flags > 0 && (
+                  <p className="mt-4 flex items-center gap-2 text-sm text-amber-800 dark:text-amber-300">
+                    <AlertTriangle size={16} /> Price is more than 8% above the regional
+                    baseline on flagged lots.
+                  </p>
+                )}
+                <div className="mt-4 overflow-x-auto rounded-lg border border-stone-200 dark:border-neutral-800">
+                  <table className="w-full min-w-[640px] text-left text-sm">
+                    <thead>
+                      <tr className="bg-stone-100 font-mono text-[11px] uppercase tracking-wide text-slate-500 dark:bg-neutral-800 dark:text-neutral-400">
+                        <th className="px-3 py-2">Produce</th>
+                        <th className="px-3 py-2">Stock</th>
+                        <th className="px-3 py-2">Listed price</th>
+                        <th className="px-3 py-2">Baseline</th>
+                        <th className="px-3 py-2">Harvest</th>
+                        <th className="px-3 py-2">Delivery</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-stone-100 dark:divide-neutral-800">
+                      {seller.items.map((item) => {
+                        const pct = diffPct(item);
+                        const over = item.price > item.suggested * 1.08;
+                        return (
+                          <tr key={item.id}>
+                            <td className="px-3 py-2">
+                              <p className="font-bold">{item.variety}</p>
+                              <p className="font-mono text-[11px] text-slate-500 dark:text-neutral-400">
+                                {item.category} · {item.grade}
+                              </p>
+                            </td>
+                            <td className="px-3 py-2 font-mono text-xs">
+                              {item.quantity} {item.unit}
+                            </td>
+                            <td className="px-3 py-2 font-mono text-xs font-bold">
+                              {formatCurrency(item.price)}/{item.unit}
+                            </td>
+                            <td className="px-3 py-2 font-mono text-xs">
+                              {formatCurrency(item.suggested)}
+                              <span
+                                className={`ml-1 font-bold ${over ? "text-red-600 dark:text-red-400" : "text-emerald-700 dark:text-emerald-400"}`}
+                              >
+                                {pct > 0 ? `+${pct}%` : `${pct}%`}
+                                {over ? " ↑" : ""}
+                              </span>
+                            </td>
+                            <td className="px-3 py-2 font-mono text-xs">{item.harvest}</td>
+                            <td className="px-3 py-2 font-mono text-xs">
+                              {item.delivery.join(", ")}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Moderation actions */}
+                <div className="mt-4 flex flex-wrap items-center gap-2">
+                  {warned ? (
+                    <Button variant="outline" onClick={() => set(seller.name, "active")}>
+                      <CircleCheck size={16} /> Clear warning
+                    </Button>
+                  ) : (
+                    <Button variant="outline" onClick={() => set(seller.name, "warned")}>
+                      <Send size={16} /> Warn
+                    </Button>
+                  )}
+                  {suspended ? (
+                    <Button variant="outline" onClick={() => set(seller.name, "active")}>
+                      <Undo2 size={16} /> Unsuspend
+                    </Button>
+                  ) : (
+                    <Button variant="danger" onClick={() => set(seller.name, "suspended")}>
+                      <Ban size={16} /> Suspend
+                    </Button>
+                  )}
+                </div>
+              </div>
+            )}
+          </Card>
+        );
+      })}
+    </div>
+  );
+}

@@ -1,2 +1,147 @@
-import Link from "next/link"; import { AlertTriangle, ArrowUpRight, Package, Plus, TrendingUp } from "lucide-react"; import { Card } from "@/components/ui/Card"; import { Badge } from "@/components/ui/Badge"; import { listings } from "@/lib/demo-data"; import { formatCurrency } from "@/lib/utils"; import { priceAdvisory } from "@/lib/pricing";
-export function FarmerDashboard(){const mine=listings.slice(0,3);const advice=priceAdvisory(28,30);return <main className="mx-auto max-w-7xl px-4 py-7 sm:px-6"><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="font-mono text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-400">SELL PRODUCE</p><h1 className="mt-2 font-display text-3xl font-bold">Your selling board</h1><p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Any AgriLink member can list fresh produce and manage their own sales.</p></div><Link href="/dashboard/listings/new" className="inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-4 py-3 text-sm font-bold text-white"><Plus size={17}/> New listing</Link></div><div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{[[Package,"3","Active listings","emerald"],[TrendingUp,"₹18,430","Est. earnings","amber"],[ArrowUpRight,"2","Orders in progress","emerald"],[AlertTriangle,"1","Stock running low","orange"]].map(([Icon,value,label,tone])=>{const I=Icon as typeof Package;return <Card key={String(label)} className="p-4"><I className={tone==="orange"?"text-orange-600":"text-emerald-700"} size={19}/><p className="mt-5 font-mono text-2xl font-bold">{String(value)}</p><p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{String(label)}</p></Card>})}</div><div className="mt-7 grid gap-5 lg:grid-cols-[1.3fr_.7fr]"><Card className="overflow-hidden"><div className="flex items-center justify-between border-b border-stone-200 p-5 dark:border-slate-800"><h2 className="font-display text-xl font-bold">Your active stock</h2><Link href="/dashboard/listings" className="text-sm font-bold text-emerald-800 dark:text-emerald-400">Manage stock</Link></div><div className="divide-y divide-stone-100 dark:divide-slate-800">{mine.map(x=><div key={x.id} className="flex items-center justify-between gap-3 p-4"><div><p className="font-bold">{x.variety}</p><p className="mt-1 font-mono text-xs text-slate-500 dark:text-slate-400">{x.quantity} kg left · {x.harvest}</p></div><div className="text-right"><p className="font-mono text-sm font-bold text-emerald-800 dark:text-emerald-400">{formatCurrency(x.price)}/kg</p><Badge tone="emerald">LIVE</Badge></div></div>)}</div></Card><Card className="p-5"><p className="font-mono text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Price advisory</p><h2 className="mt-2 font-display text-xl font-bold">Tomato market position</h2><div className="mt-5 flex items-end gap-3"><span className="font-mono text-3xl font-bold text-emerald-800 dark:text-emerald-400">₹28</span><span className="pb-1 text-sm text-slate-500 dark:text-slate-400">your listing / kg</span></div><p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Regional average is <span className="font-mono">₹30/kg</span>. Your price is {Math.abs(advice.delta)}% below market.</p><div className="mt-4 rounded-lg bg-amber-50 p-3 text-sm leading-5 text-amber-950 dark:bg-amber-950 dark:text-amber-100">Demand is trending up and your produce has 4 days of shelf life left — consider listing now.</div></Card></div></main>}
+"use client";
+
+import Link from "next/link";
+import {
+  AlertTriangle,
+  ArrowUpRight,
+  Package,
+  Plus,
+  Trash2,
+  TrendingUp,
+} from "lucide-react";
+import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { formatCurrency } from "@/lib/utils";
+import { priceAdvisory } from "@/lib/pricing";
+import { useLanguage } from "@/components/shared/LanguageProvider";
+import { useListings } from "@/lib/useListings";
+
+export function FarmerDashboard() {
+  const { t } = useLanguage();
+  const { listings: visible, myListings, deleteListing } = useListings();
+  const mineIds = new Set(myListings.map((m) => m.id));
+  const stock = [
+    ...myListings,
+    ...visible.filter((l) => !mineIds.has(l.id)),
+  ].slice(0, 3);
+  const confirmDelete = (id: string) => {
+    if (
+      window.confirm(t("Delete this listing permanently? This cannot be undone."))
+    ) {
+      deleteListing(id);
+    }
+  };
+  const advice = priceAdvisory(28, 30);
+  const stats = [
+    { Icon: Package, value: String(visible.length), label: t("Active listings") },
+    { Icon: TrendingUp, value: "₹18,430", label: t("Est. earnings") },
+    { Icon: ArrowUpRight, value: "2", label: t("Orders in progress") },
+    { Icon: AlertTriangle, value: "1", label: t("Stock running low") },
+  ];
+  return (
+    <main className="mx-auto max-w-7xl px-4 py-7 sm:px-6">
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p className="font-mono text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+            {t("SELL PRODUCE")}
+          </p>
+          <h1 className="mt-2 font-display text-3xl font-bold">
+            {t("Your selling board")}
+          </h1>
+          <p className="mt-2 text-sm text-slate-600 dark:text-neutral-300">
+            {t(
+              "Any AgriLink member can list fresh produce and manage their own sales.",
+            )}
+          </p>
+        </div>
+        <Link
+          href="/dashboard/listings/new"
+          className="inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-4 py-3 text-sm font-bold text-white"
+        >
+          <Plus size={17} /> {t("New listing")}
+        </Link>
+      </div>
+      <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {stats.map(({ Icon, value, label }) => (
+          <Card key={label} className="p-4">
+            <Icon className="text-emerald-700" size={19} />
+            <p className="mt-5 font-mono text-2xl font-bold">{value}</p>
+            <p className="mt-1 text-sm text-slate-600 dark:text-neutral-300">
+              {label}
+            </p>
+          </Card>
+        ))}
+      </div>
+      <div className="mt-7 grid gap-5 lg:grid-cols-[1.3fr_.7fr]">
+        <Card className="overflow-hidden">
+          <div className="flex items-center justify-between border-b border-stone-200 p-5 dark:border-neutral-800">
+            <h2 className="font-display text-xl font-bold">
+              {t("Your active stock")}
+            </h2>
+            <Link
+              href="/dashboard/listings"
+              className="text-sm font-bold text-emerald-800 dark:text-emerald-400"
+            >
+              {t("Manage stock")}
+            </Link>
+          </div>
+          <div className="divide-y divide-stone-100 dark:divide-neutral-800">
+            {stock.map((x) => (
+              <div
+                key={x.id}
+                className="flex items-center justify-between gap-3 p-4"
+              >
+                <div className="min-w-0">
+                  <p className="truncate font-bold">{x.variety}</p>
+                  <p className="mt-1 font-mono text-xs text-slate-500 dark:text-neutral-400">
+                    {x.quantity} kg left · {x.harvest}
+                  </p>
+                </div>
+                <div className="flex shrink-0 items-center gap-3">
+                  <div className="text-right">
+                    <p className="font-mono text-sm font-bold text-emerald-800 dark:text-emerald-400">
+                      {formatCurrency(x.price)}/kg
+                    </p>
+                    <Badge tone="emerald">LIVE</Badge>
+                  </div>
+                  <button
+                    onClick={() => confirmDelete(x.id)}
+                    aria-label={`${t("Delete")} ${x.variety}`}
+                    title={t("Delete")}
+                    className="rounded-lg border border-red-200 p-2 text-red-700 transition hover:bg-red-50 dark:border-red-900 dark:text-red-400 dark:hover:bg-red-950"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Card>
+        <Card className="p-5">
+          <p className="font-mono text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+            {t("Price advisory")}
+          </p>
+          <h2 className="mt-2 font-display text-xl font-bold">
+            {t("Tomato market position")}
+          </h2>
+          <div className="mt-5 flex items-end gap-3">
+            <span className="font-mono text-3xl font-bold text-emerald-800 dark:text-emerald-400">
+              ₹28
+            </span>
+            <span className="pb-1 text-sm text-slate-500 dark:text-neutral-400">
+              {t("your listing / kg")}
+            </span>
+          </div>
+          <p className="mt-2 text-sm text-slate-600 dark:text-neutral-300">
+            Regional average is <span className="font-mono">₹30/kg</span>.
+            Your price is {Math.abs(advice.delta)}% below market.
+          </p>
+          <div className="mt-4 rounded-lg bg-amber-50 p-3 text-sm leading-5 text-amber-950 dark:bg-amber-950 dark:text-amber-100">
+            Demand is trending up and your produce has 4 days of shelf life
+            left — consider listing now.
+          </div>
+        </Card>
+      </div>
+    </main>
+  );
+}
