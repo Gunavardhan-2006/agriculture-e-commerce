@@ -29,6 +29,7 @@ export function Navbar() {
             <Link href="/marketplace">{t("Buy produce")}</Link>
             <Link href="/dashboard">{t("Sell produce")}</Link>
             <Link href="/articles">{t("Learn")}</Link>
+            <Link href="/analytics">{t("Analytics")}</Link>
           </nav>
           <div className="flex items-center gap-1 sm:gap-2">
             <LanguageSelector />
