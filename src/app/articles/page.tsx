@@ -1,0 +1,1 @@
+import { Navbar } from "@/components/shared/Navbar"; import { AgricultureArticles } from "@/components/marketing/AgricultureArticles"; export default function Articles(){return <><Navbar/><AgricultureArticles/></>}

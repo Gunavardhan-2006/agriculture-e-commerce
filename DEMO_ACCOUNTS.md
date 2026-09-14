@@ -1,10 +1,10 @@
 # AgriLink demo accounts
 
-These credentials are available in the current demo UI. Authentication is client-side demo authentication until the Better Auth database connection is configured.
+AgriLink uses an open marketplace model: every member can browse, buy, and publish produce. The admin account is only for moderation controls.
 
-| Role   | Email                  | Password     | Opens                        |
-| ------ | ---------------------- | ------------ | ---------------------------- |
-| Farmer | `ramesh@agrilink.demo` | `Farmer@123` | Farmer desk (`/dashboard`)   |
-| Buyer  | `priya@agrilink.demo`  | `Buyer@123`  | Marketplace (`/marketplace`) |
+| Account | Email | Password | Opens |
+| --- | --- | --- | --- |
+| Member | `member@agrilink.demo` | `AgriLink@123` | Marketplace |
+| Admin | `admin@agrilink.demo` | `Admin@123` | Admin controls |
 
-The cart persists in the browser for the current device. Add listings from their detail page, then use the controls in `/cart` to increase, decrease, or remove products.
+Legacy demo credentials remain accepted for this demo but have no separate farmer or buyer permissions.

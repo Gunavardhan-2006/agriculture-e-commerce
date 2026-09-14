@@ -1,0 +1,3 @@
+"use client";
+import { useState } from "react"; import { Ban, ShieldCheck } from "lucide-react"; import { Button } from "@/components/ui/Button";
+export function AdminControls(){const [suspended,setSuspended]=useState(false);return <div className="flex flex-wrap gap-2">{suspended?<span className="inline-flex items-center gap-2 rounded-lg bg-red-100 px-3 py-2 text-sm font-bold text-red-800"><Ban size={16}/> Listing suspended</span>:<Button variant="danger" onClick={()=>setSuspended(true)}><Ban size={16}/> Suspend listing</Button>}<Button variant="outline"><ShieldCheck size={16}/> Mark reviewed</Button></div>}
