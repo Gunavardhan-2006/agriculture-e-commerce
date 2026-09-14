@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Google_Sans_Code } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/components/shared/LanguageProvider";
 import { STORAGE_KEY } from "@/lib/i18n";
@@ -14,6 +14,11 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const display = Google_Sans_Code({
+  variable: "--font-google-sans-code",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "AgriLink | Farm to market",
   description: "Direct farm marketplace and delivery coordination",
@@ -24,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${mono.variable} h-full`}
+      className={`${inter.variable} ${mono.variable} ${display.variable} h-full`}
     >
       <head>
         <script
@@ -33,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
       </head>
-      <body className="min-h-full bg-stone-50 font-[family-name:var(--font-inter)] text-slate-900 dark:bg-black dark:text-stone-100">
+      <body className="min-h-full bg-stone-50 font-sans text-slate-900 dark:bg-black dark:text-stone-100">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

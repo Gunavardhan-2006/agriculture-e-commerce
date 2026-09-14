@@ -4,7 +4,11 @@ import { readCart, saveCart } from "@/lib/cart";
 
 export const MY_LISTINGS_KEY = "agrilink-my-listings";
 export const DELETED_LISTINGS_KEY = "agrilink-deleted-listings";
+export const BLOCKED_LISTINGS_KEY = "agrilink-blocked-listings";
 export const LISTINGS_EVENT = "agrilink-listings-change";
+
+/** Demo identity allowed to block/unblock products (mirrors AdminGate). */
+export const ADMIN_DEMO_EMAIL = "admin@agrilink.demo";
 
 const isBrowser = () => typeof window !== "undefined";
 
@@ -43,11 +47,76 @@ export function getDeletedIds(): string[] {
   return Array.isArray(ids) ? ids : [];
 }
 
-/** Everything visible across marketplace, home and dashboard. */
+/** Listing ids the admin has blocked. Blocked products are hidden from every product list. */
+export function getBlockedIds(): string[] {
+  const ids = readJSON<string[]>(BLOCKED_LISTINGS_KEY, []);
+  return Array.isArray(ids) ? ids : [];
+}
+
+export function isListingBlocked(id: string): boolean {
+  return getBlockedIds().includes(id);
+}
+
+function currentDemoEmail(): string {
+  if (!isBrowser()) return "";
+  try {
+    return window.localStorage.getItem("agrilink-demo-user") ?? "";
+  } catch {
+    return "";
+  }
+}
+
+/** Only the admin demo identity may block/unblock products. */
+export function isAdminSession(): boolean {
+  return currentDemoEmail().toLowerCase() === ADMIN_DEMO_EMAIL;
+}
+
+function purgeIdFromCart(id: string) {
+  try {
+    const cart = readCart();
+    if (cart.some((item) => item.id === id)) {
+      saveCart(cart.filter((item) => item.id !== id));
+    }
+  } catch {
+    // cart cleanup is best-effort
+  }
+}
+
+/**
+ * Admin-only: hides a product from the marketplace, home page, dashboard
+ * lists, and detail pages. Returns false when the caller is not an admin.
+ */
+export function blockListingById(id: string): boolean {
+  if (!isAdminSession()) return false;
+  const blocked = getBlockedIds();
+  if (!blocked.includes(id)) {
+    writeJSON(BLOCKED_LISTINGS_KEY, [...blocked, id]);
+  }
+  purgeIdFromCart(id);
+  notifyListingsChanged();
+  return true;
+}
+
+/** Admin-only: makes a blocked product visible again. */
+export function unblockListingById(id: string): boolean {
+  if (!isAdminSession()) return false;
+  writeJSON(
+    BLOCKED_LISTINGS_KEY,
+    getBlockedIds().filter((blockedId) => blockedId !== id),
+  );
+  notifyListingsChanged();
+  return true;
+}
+
+/** Everything visible across marketplace, home and dashboard (excludes blocked). */
 export function getVisibleListings(): Listing[] {
   const mine = getMyListings();
   const deleted = new Set(getDeletedIds());
-  return [...mine, ...demoListings.filter((l) => !deleted.has(l.id))];
+  const blocked = new Set(getBlockedIds());
+  return [
+    ...mine.filter((l) => !blocked.has(l.id)),
+    ...demoListings.filter((l) => !deleted.has(l.id) && !blocked.has(l.id)),
+  ];
 }
 
 export function displayNameFromEmail(email: string): string {

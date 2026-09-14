@@ -14,7 +14,7 @@ import { useLanguage } from "@/components/shared/LanguageProvider";
 
 export function ListingDetail({ listing }: { listing: Listing }) {
   const { t } = useLanguage();
-  const [qty, setQty] = useState(listing.quantity > 50 ? 25 : 5);
+  const [qty, setQty] = useState(Math.max(1, Math.min(5, listing.quantity)));
   const [added, setAdded] = useState(false);
   const cost = buyerCost(listing.price, qty, listing.distance);
   return (
