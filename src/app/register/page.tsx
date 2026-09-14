@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { LoaderCircle } from "lucide-react";
 import { Navbar } from "@/components/shared/Navbar";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -71,7 +72,14 @@ export default function Register() {
               </p>
             )}
             <Button type="submit" disabled={loading}>
-              {loading ? "..." : t("Create account")}
+              {loading ? (
+                <>
+                  <LoaderCircle size={16} className="animate-spin" />
+                  {t("Creating account…")}
+                </>
+              ) : (
+                t("Create account")
+              )}
             </Button>
           </form>
           <p className="mt-4 text-xs leading-5 text-slate-500 dark:text-neutral-400">

@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { LoaderCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/components/shared/LanguageProvider";
 import { signIn } from "@/lib/authclient";
@@ -22,7 +23,8 @@ export function LoginForm() {
       setError(error.message ?? "Invalid email or password.");
       return;
     }
-    router.push("/");
+    const next = new URLSearchParams(window.location.search).get("next") || "/";
+    router.push(next);
     router.refresh();
   };
   return (
@@ -47,7 +49,14 @@ export function LoginForm() {
         <p className="rounded bg-red-50 p-3 text-sm text-red-700">{error}</p>
       )}
       <Button type="submit" disabled={loading}>
-        {loading ? "..." : t("Sign in")}
+        {loading ? (
+          <>
+            <LoaderCircle size={16} className="animate-spin" />
+            {t("Signing in…")}
+          </>
+        ) : (
+          t("Sign in")
+        )}
       </Button>
     </form>
   );

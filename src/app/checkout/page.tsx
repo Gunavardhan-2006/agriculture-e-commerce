@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Check, MapPin, ShoppingBasket, Truck, Wallet } from "lucide-react";
 import { Navbar } from "@/components/shared/Navbar";
 import { CheckoutPanel } from "@/components/buyer/CheckoutPanel";
@@ -10,13 +11,24 @@ import { Button } from "@/components/ui/Button";
 import { formatCurrency } from "@/lib/utils";
 import { useLanguage } from "@/components/shared/LanguageProvider";
 import { useCart } from "@/lib/useCart";
+import { useSession } from "@/lib/authclient";
 
 const SLOTS = ["Tomorrow · 9–12", "Tomorrow · 2–5"] as const;
 
 export default function Checkout() {
   const { t } = useLanguage();
+  const router = useRouter();
   const { items, totals } = useCart();
+  const { data: session, isPending } = useSession();
   const [slot, setSlot] = useState<(typeof SLOTS)[number]>(SLOTS[0]);
+
+  useEffect(() => {
+    if (!isPending && !session?.user) {
+      router.replace("/login?next=/checkout");
+    }
+  }, [isPending, session, router]);
+
+  if (isPending || !session?.user) return null;
 
   const steps = [
     { Icon: ShoppingBasket, label: t("Cart"), href: "/cart" as const, done: true },

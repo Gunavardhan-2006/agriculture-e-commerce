@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { auth } from "@/lib/auth/auth";
 const schema = z.object({
   idempotencyKey: z.string().min(1),
   items: z
@@ -13,6 +14,11 @@ const schema = z.object({
     .min(1),
 });
 export async function POST(request: Request) {
+  const session = await auth.api.getSession({
+    headers: request.headers,
+  });
+  if (!session)
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const body = schema.safeParse(await request.json());
   if (!body.success)
     return NextResponse.json(
