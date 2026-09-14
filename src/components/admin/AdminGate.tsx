@@ -1,0 +1,3 @@
+"use client";
+import { useEffect, useState } from "react"; import { useRouter } from "next/navigation"; import { ShieldAlert } from "lucide-react";
+export function AdminGate({children}:{children:React.ReactNode}){const router=useRouter();const [allowed,setAllowed]=useState(false);useEffect(()=>{if(localStorage.getItem("agrilink-demo-user")==="admin@agrilink.demo")setAllowed(true);else router.replace("/login")},[router]);if(!allowed)return <main className="grid min-h-[70vh] place-items-center px-4"><div className="text-center"><ShieldAlert className="mx-auto text-emerald-700" size={32}/><p className="mt-3 font-display text-xl font-bold">Checking admin access…</p></div></main>;return <>{children}</>}

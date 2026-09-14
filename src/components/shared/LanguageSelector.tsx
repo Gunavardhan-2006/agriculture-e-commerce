@@ -1,0 +1,4 @@
+"use client";
+import { Languages } from "lucide-react"; import { useEffect, useState } from "react";
+const choices=[{value:"en",label:"EN"},{value:"hi",label:"हिं"},{value:"te",label:"తె"}];
+export function LanguageSelector(){const [language,setLanguage]=useState("en");useEffect(()=>setLanguage(localStorage.getItem("agrilink-language")??"en"),[]);const update=(value:string)=>{setLanguage(value);localStorage.setItem("agrilink-language",value);document.documentElement.lang=value};return <label className="flex items-center gap-1 rounded-lg border border-stone-300 px-2 py-1 text-slate-700 dark:border-slate-700 dark:text-stone-200"><Languages size={15}/><select aria-label="Choose language" value={language} onChange={e=>update(e.target.value)} className="max-w-10 bg-transparent text-xs font-bold outline-none"><option value="en">EN</option><option value="hi">हिं</option><option value="te">తె</option></select></label>}
