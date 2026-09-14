@@ -1,0 +1,3 @@
+import { cn } from "@/lib/utils";
+import type { ButtonHTMLAttributes } from "react";
+export function Button({ className, variant="primary", ...props }: ButtonHTMLAttributes<HTMLButtonElement> & {variant?:"primary"|"secondary"|"outline"|"danger"}) { const styles={primary:"bg-emerald-700 text-white hover:bg-emerald-800",secondary:"bg-amber-400 text-slate-950 hover:bg-amber-300",outline:"border border-slate-300 bg-white text-slate-700 hover:bg-stone-50",danger:"bg-red-700 text-white hover:bg-red-800"}; return <button className={cn("inline-flex min-h-10 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50",styles[variant],className)} {...props}/>; }

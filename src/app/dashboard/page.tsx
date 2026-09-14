@@ -1,0 +1,1 @@
+import { Navbar } from "@/components/shared/Navbar"; import { FarmerDashboard } from "@/components/farmer/FarmerDashboard"; export default function Dashboard(){return <><Navbar/><FarmerDashboard/></>}

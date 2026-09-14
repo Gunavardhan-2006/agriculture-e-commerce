@@ -1,0 +1,1 @@
+import { Navbar } from "@/components/shared/Navbar"; import { MarketplaceClient } from "@/components/buyer/MarketplaceClient"; export default function Marketplace(){return <><Navbar/><MarketplaceClient/></>}

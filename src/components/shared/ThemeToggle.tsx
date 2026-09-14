@@ -1,0 +1,3 @@
+"use client";
+import { Moon, Sun } from "lucide-react"; import { useEffect, useState } from "react";
+export function ThemeToggle(){const [dark,setDark]=useState(false);useEffect(()=>{const active=localStorage.getItem("agrilink-theme")==="dark";setDark(active);document.documentElement.classList.toggle("dark",active)},[]);const toggle=()=>{const next=!dark;setDark(next);localStorage.setItem("agrilink-theme",next?"dark":"light");document.documentElement.classList.toggle("dark",next)};return <button onClick={toggle} aria-label="Toggle dark mode" className="rounded-lg p-2 text-slate-700 hover:bg-stone-200 dark:text-stone-200 dark:hover:bg-slate-800">{dark?<Sun size={19}/>:<Moon size={19}/>}</button>}

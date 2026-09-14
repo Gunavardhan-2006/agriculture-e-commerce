@@ -1,0 +1,2 @@
+import { NextResponse } from "next/server"; import { z } from "zod";
+export async function POST(request:Request){const data=z.object({orderId:z.string(),method:z.enum(["upi","card","cod"]),attempt:z.number().default(1)}).parse(await request.json());const success=data.method==="cod"||data.attempt%10!==0;return NextResponse.json({orderId:data.orderId,status:success?(data.method==="cod"?"pending":"success"):"failed",mockReference:`AGRPAY-${Date.now()}`,orderStatus:success?"confirmed":"placed"})}

@@ -1,0 +1,3 @@
+import { NextResponse } from "next/server"; import { z } from "zod";
+const listingSchema=z.object({quantity:z.number().positive(),availableFrom:z.string(),availableUntil:z.string()}).superRefine((v,c)=>{if(new Date(v.availableUntil)<=new Date(v.availableFrom))c.addIssue({code:"custom",message:"Availability end must be after start."});if(new Date(v.availableUntil)<new Date())c.addIssue({code:"custom",message:"Availability end cannot be in the past."})});
+export async function POST(request:Request){const result=listingSchema.safeParse(await request.json());if(!result.success)return NextResponse.json({error:result.error.issues[0].message},{status:422});return NextResponse.json({listing:result.data,duplicateFlag:false},{status:201})}
