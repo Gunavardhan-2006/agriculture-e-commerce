@@ -1,23 +1,19 @@
 "use client";
 import Link from "next/link";
 import { LogOut } from "lucide-react";
-import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useLanguage } from "./LanguageProvider";
+import { signOut, useSession } from "@/lib/authclient";
 
 export function AuthControl() {
-  const router = useRouter(),
-    pathname = usePathname();
+  const router = useRouter();
   const { t } = useLanguage();
-  const [signedIn, setSignedIn] = useState(false);
-  useEffect(
-    () => setSignedIn(Boolean(localStorage.getItem("agrilink-demo-user"))),
-    [pathname],
-  );
-  const logout = () => {
-    localStorage.removeItem("agrilink-demo-user");
-    setSignedIn(false);
+  const { data: session } = useSession();
+  const signedIn = Boolean(session?.user);
+  const logout = async () => {
+    await signOut();
     router.push("/");
+    router.refresh();
   };
   return signedIn ? (
     <button

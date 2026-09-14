@@ -19,7 +19,8 @@ const hi: Dict = {
   "Sell produce": "उपज बेचें",
   Learn: "सीखें",
   "Direct produce exchange · India": "प्रत्यक्ष उपज विनिमय · भारत",
-  "Better prices start at the farm gate.": "बेहतर दाम खेत के द्वार से शुरू होते हैं।",
+  "Better prices start at the farm gate.":
+    "बेहतर दाम खेत के द्वार से शुरू होते हैं।",
   "AgriLink gives farmers control of inventory and buyers a clear view of fresh stock, delivery cost, and the people behind every order.":
     "AgriLink किसानों को स्टॉक का नियंत्रण देता है और खरीदारों को ताज़ा स्टॉक, डिलीवरी लागत और हर ऑर्डर के पीछे के लोगों की स्पष्ट जानकारी देता है।",
   "Browse today's harvest": "आज की फसल देखें",
@@ -28,7 +29,8 @@ const hi: Dict = {
   "farmer payouts this week": "इस सप्ताह किसान भुगतान",
   "MARKET UPDATE": "बाज़ार अपडेट",
   "Fresh lots added all day": "दिन भर ताज़ा लॉट जुड़ते हैं",
-  "Compare quality, source, and price before buying": "खरीदने से पहले गुणवत्ता, स्रोत और दाम की तुलना करें",
+  "Compare quality, source, and price before buying":
+    "खरीदने से पहले गुणवत्ता, स्रोत और दाम की तुलना करें",
   "Fresh off the field": "खेत से ताज़ा",
   "Market board": "बाज़ार बोर्ड",
   "See all listings →": "सभी लिस्टिंग देखें →",
@@ -41,9 +43,11 @@ const hi: Dict = {
   "Tracked lifecycle": "ट्रैक किया गया जीवनचक्र",
   "From harvest pack to hand-off to delivery, every update is visible.":
     "कटाई-पैकिंग से हैंडऑफ़ से डिलीवरी तक, हर अपडेट दिखाई देता है।",
-  "Live farm inventory · Hyderabad region": "लाइव फार्म स्टॉक · हैदराबाद क्षेत्र",
+  "Live farm inventory · Hyderabad region":
+    "लाइव फार्म स्टॉक · हैदराबाद क्षेत्र",
   "Buy closer to the source.": "स्रोत के करीब से खरीदें।",
-  "Try: fresh tomatoes under ₹30/kg near Hyderabad": "आज़माएँ: हैदराबाद के पास ₹30/किलो से कम ताज़ा टमाटर",
+  "Try: fresh tomatoes under ₹30/kg near Hyderabad":
+    "आज़माएँ: हैदराबाद के पास ₹30/किलो से कम ताज़ा टमाटर",
   "Best match": "सर्वोत्तम मिलान",
   "Price: low to high": "मूल्य: कम से ज़्यादा",
   Distance: "दूरी",
@@ -60,7 +64,8 @@ const hi: Dict = {
   "Adjust quantities, remove items, or continue to a final server-side stock check.":
     "मात्रा बदलें, आइटम हटाएँ, या अंतिम स्टॉक जाँच के लिए आगे बढ़ें।",
   "Your cart is empty.": "आपकी टोकरी खाली है।",
-  "Pick freshly listed produce from the market board.": "बाज़ार बोर्ड से ताज़ा सूचीबद्ध उपज चुनें।",
+  "Pick freshly listed produce from the market board.":
+    "बाज़ार बोर्ड से ताज़ा सूचीबद्ध उपज चुनें।",
   "Browse marketplace": "बाज़ार देखें",
   "Order summary": "ऑर्डर सारांश",
   Produce: "उपज",
@@ -74,7 +79,8 @@ const hi: Dict = {
   "Tomorrow · 9–12": "कल · 9–12",
   "Tomorrow · 2–5": "कल · 2–5",
   Payment: "भुगतान",
-  "Demo checkout — no payment details are stored.": "डेमो चेकआउट — कोई भुगतान विवरण संग्रहीत नहीं होता।",
+  "Demo checkout — no payment details are stored.":
+    "डेमो चेकआउट — कोई भुगतान विवरण संग्रहीत नहीं होता।",
   "Order placed successfully.": "ऑर्डर सफलतापूर्वक दिया गया।",
   "Payment record AGRPAY-90217 saved. Farmer confirmation is next.":
     "भुगतान रिकॉर्ड AGRPAY-90217 सहेजा गया। आगे किसान की पुष्टि होगी।",
@@ -163,7 +169,8 @@ const hi: Dict = {
   "A transporter will be assigned after the farmer marks your order ready.":
     "किसान द्वारा ऑर्डर तैयार चिह्नित करने के बाद ट्रांसपोर्टर नियुक्त होगा।",
   "DELIVERY ADDRESS": "डिलीवरी पता",
-  "Route shown is an estimate, not live GPS.": "दिखाया गया रूट अनुमान है, लाइव GPS नहीं।",
+  "Route shown is an estimate, not live GPS.":
+    "दिखाया गया रूट अनुमान है, लाइव GPS नहीं।",
   "Publish harvest availability": "फसल उपलब्धता प्रकाशित करें",
   "FARMER DESK / NEW LISTING": "किसान डेस्क / नई लिस्टिंग",
   "Farm location: Chevella, Telangana. Complete your profile before publishing if this is not correct.":
@@ -171,7 +178,8 @@ const hi: Dict = {
   "Agriculture field notes": "कृषि जानकारी",
   "Practical market, crop, and weather guidance for producers and buyers.":
     "उत्पादकों और खरीदारों के लिए बाज़ार, फसल और मौसम की व्यावहारिक सलाह।",
-  "{count} live listings · data updated 8 min ago": "{count} लाइव लिस्टिंग · 8 मिनट पहले अपडेट",
+  "{count} live listings · data updated 8 min ago":
+    "{count} लाइव लिस्टिंग · 8 मिनट पहले अपडेट",
   "No produce matches those filters.": "इन फ़िल्टरों से कोई उपज मेल नहीं खाती।",
   "Broaden your location, price, or freshness filter to see live farm stock.":
     "लाइव फार्म स्टॉक देखने के लिए स्थान, मूल्य या ताज़गी फ़िल्टर बढ़ाएँ।",
@@ -207,7 +215,8 @@ const hi: Dict = {
   "Top listings by stock value": "स्टॉक मूल्य के शीर्ष लिस्टिंग",
   Value: "मूल्य",
   "AI assistant": "एआई सहायक",
-  "Ask about prices, delivery, orders…": "दाम, डिलीवरी, ऑर्डर के बारे में पूछें…",
+  "Ask about prices, delivery, orders…":
+    "दाम, डिलीवरी, ऑर्डर के बारे में पूछें…",
   "Online · replies instantly": "ऑनलाइन · तुरंत उत्तर",
   "Paddy prices": "धान के भाव",
   "How to sell": "कैसे बेचें",
@@ -231,7 +240,8 @@ const te: Dict = {
   "Sell produce": "పంట అమ్మండి",
   Learn: "నేర్చుకోండి",
   "Direct produce exchange · India": "ప్రత్యక్ష పంట మార్పిడి · భారతదేశం",
-  "Better prices start at the farm gate.": "మెరుగైన ధరలు పొలం గేటు వద్దే మొదలవుతాయి.",
+  "Better prices start at the farm gate.":
+    "మెరుగైన ధరలు పొలం గేటు వద్దే మొదలవుతాయి.",
   "AgriLink gives farmers control of inventory and buyers a clear view of fresh stock, delivery cost, and the people behind every order.":
     "AgriLink రైతులకు నిల్వపై నియంత్రణ ఇస్తుంది, కొనుగోలుదారులకు తాజా స్టాక్, డెలివరీ ఖర్చు, ప్రతి ఆర్డర్ వెనుక ఉన్న వ్యక్తులపై స్పష్టత ఇస్తుంది.",
   "Browse today's harvest": "నేటి పంటను చూడండి",
@@ -240,7 +250,8 @@ const te: Dict = {
   "farmer payouts this week": "ఈ వారం రైతు చెల్లింపులు",
   "MARKET UPDATE": "మార్కెట్ అప్‌డేట్",
   "Fresh lots added all day": "రోజంతా తాజా లాట్లు జోడించబడతాయి",
-  "Compare quality, source, and price before buying": "కొనే ముందు నాణ్యత, మూలం, ధరను పోల్చండి",
+  "Compare quality, source, and price before buying":
+    "కొనే ముందు నాణ్యత, మూలం, ధరను పోల్చండి",
   "Fresh off the field": "పొలం నుండి తాజాగా",
   "Market board": "మార్కెట్ బోర్డు",
   "See all listings →": "అన్ని జాబితాలను చూడండి →",
@@ -253,9 +264,11 @@ const te: Dict = {
   "Tracked lifecycle": "ట్రాక్ చేయబడిన జీవనచక్రం",
   "From harvest pack to hand-off to delivery, every update is visible.":
     "కోత-ప్యాకింగ్ నుండి అప్పగింత నుండి డెలివరీ వరకు ప్రతి అప్‌డేట్ కనిపిస్తుంది.",
-  "Live farm inventory · Hyderabad region": "ప్రత్యక్ష పొలం నిల్వ · హైదరాబాద్ ప్రాంతం",
+  "Live farm inventory · Hyderabad region":
+    "ప్రత్యక్ష పొలం నిల్వ · హైదరాబాద్ ప్రాంతం",
   "Buy closer to the source.": "మూలానికి దగ్గరగా కొనండి.",
-  "Try: fresh tomatoes under ₹30/kg near Hyderabad": "ప్రయత్నించండి: హైదరాబాద్ సమీపంలో ₹30/కిలో లోపు తాజా టమాటాలు",
+  "Try: fresh tomatoes under ₹30/kg near Hyderabad":
+    "ప్రయత్నించండి: హైదరాబాద్ సమీపంలో ₹30/కిలో లోపు తాజా టమాటాలు",
   "Best match": "ఉత్తమ సరిపోలిక",
   "Price: low to high": "ధర: తక్కువ నుండి ఎక్కువ",
   Distance: "దూరం",
@@ -272,7 +285,8 @@ const te: Dict = {
   "Adjust quantities, remove items, or continue to a final server-side stock check.":
     "పరిమాణాలు మార్చండి, అంశాలు తొలగించండి లేదా తుది స్టాక్ తనిఖీకి కొనసాగండి.",
   "Your cart is empty.": "మీ బండి ఖాళీగా ఉంది.",
-  "Pick freshly listed produce from the market board.": "మార్కెట్ బోర్డు నుండి తాజా పంటను ఎంచుకోండి.",
+  "Pick freshly listed produce from the market board.":
+    "మార్కెట్ బోర్డు నుండి తాజా పంటను ఎంచుకోండి.",
   "Browse marketplace": "మార్కెట్‌ను చూడండి",
   "Order summary": "ఆర్డర్ సారాంశం",
   Produce: "పంట",
@@ -286,7 +300,8 @@ const te: Dict = {
   "Tomorrow · 9–12": "రేపు · 9–12",
   "Tomorrow · 2–5": "రేపు · 2–5",
   Payment: "చెల్లింపు",
-  "Demo checkout — no payment details are stored.": "డెమో చెక్అవుట్ — చెల్లింపు వివరాలు నిల్వ చేయబడవు.",
+  "Demo checkout — no payment details are stored.":
+    "డెమో చెక్అవుట్ — చెల్లింపు వివరాలు నిల్వ చేయబడవు.",
   "Order placed successfully.": "ఆర్డర్ విజయవంతంగా పెట్టబడింది.",
   "Payment record AGRPAY-90217 saved. Farmer confirmation is next.":
     "చెల్లింపు రికార్డు AGRPAY-90217 భద్రపరచబడింది. తర్వాత రైతు నిర్ధారణ.",
@@ -316,7 +331,8 @@ const te: Dict = {
   "Set location": "స్థానాన్ని సెట్ చేయండి",
   "Not now": "ఇప్పుడు వద్దు",
   "Save location": "స్థానాన్ని భద్రపరచండి",
-  "Village, district, state, or pincode": "గ్రామం, జిల్లా, రాష్ట్రం లేదా పిన్‌కోడ్",
+  "Village, district, state, or pincode":
+    "గ్రామం, జిల్లా, రాష్ట్రం లేదా పిన్‌కోడ్",
   "Sign in": "సైన్ ఇన్",
   "Log out": "లాగ్ అవుట్",
   "AGRLINK ACCESS": "ఎగ్రిలింక్ యాక్సెస్",
@@ -375,7 +391,8 @@ const te: Dict = {
   "A transporter will be assigned after the farmer marks your order ready.":
     "రైతు మీ ఆర్డర్ సిద్ధంగా గుర్తించిన తర్వాత రవాణాదారు కేటాయించబడతారు.",
   "DELIVERY ADDRESS": "డెలివరీ చిరునామా",
-  "Route shown is an estimate, not live GPS.": "చూపిన రూట్ అంచనా మాత్రమే, ప్రత్యక్ష GPS కాదు.",
+  "Route shown is an estimate, not live GPS.":
+    "చూపిన రూట్ అంచనా మాత్రమే, ప్రత్యక్ష GPS కాదు.",
   "Publish harvest availability": "పంట లభ్యతను ప్రచురించండి",
   "FARMER DESK / NEW LISTING": "రైతు డెస్క్ / కొత్త జాబితా",
   "Farm location: Chevella, Telangana. Complete your profile before publishing if this is not correct.":
@@ -383,7 +400,8 @@ const te: Dict = {
   "Agriculture field notes": "వ్యవసాయ సమాచారం",
   "Practical market, crop, and weather guidance for producers and buyers.":
     "ఉత్పత్తిదారులు, కొనుగోలుదారుల కోసం మార్కెట్, పంట, వాతావరణ ఆచరణ సలహాలు.",
-  "{count} live listings · data updated 8 min ago": "{count} ప్రత్యక్ష జాబితాలు · 8 నిమిషాల క్రితం నవీకరించబడింది",
+  "{count} live listings · data updated 8 min ago":
+    "{count} ప్రత్యక్ష జాబితాలు · 8 నిమిషాల క్రితం నవీకరించబడింది",
   "No produce matches those filters.": "ఈ ఫిల్టర్లకు ఏ పంట సరిపోలలేదు.",
   "Broaden your location, price, or freshness filter to see live farm stock.":
     "ప్రత్యక్ష పొలం స్టాక్ చూడటానికి స్థానం, ధర లేదా తాజాదనం ఫిల్టర్ విస్తరించండి.",
@@ -419,7 +437,8 @@ const te: Dict = {
   "Top listings by stock value": "స్టాక్ విలువ ప్రకారం అగ్ర జాబితాలు",
   Value: "విలువ",
   "AI assistant": "AI సహాయకుడు",
-  "Ask about prices, delivery, orders…": "ధరలు, డెలివరీ, ఆర్డర్ల గురించి అడగండి…",
+  "Ask about prices, delivery, orders…":
+    "ధరలు, డెలివరీ, ఆర్డర్ల గురించి అడగండి…",
   "Online · replies instantly": "ఆన్‌లైన్ · తక్షణ సమాధానం",
   "Paddy prices": "వరి ధరలు",
   "How to sell": "ఎలా అమ్మాలి",
@@ -443,7 +462,8 @@ const ta: Dict = {
   "Sell produce": "விளைபொருள் விற்க",
   Learn: "கற்க",
   "Direct produce exchange · India": "நேரடி விளைபொருள் பரிமாற்றம் · இந்தியா",
-  "Better prices start at the farm gate.": "சிறந்த விலைகள் பண்ணை வாயிலில் தொடங்குகின்றன.",
+  "Better prices start at the farm gate.":
+    "சிறந்த விலைகள் பண்ணை வாயிலில் தொடங்குகின்றன.",
   "AgriLink gives farmers control of inventory and buyers a clear view of fresh stock, delivery cost, and the people behind every order.":
     "AgriLink விவசாயிகளுக்கு இருப்பு கட்டுப்பாட்டையும், வாங்குபவர்களுக்கு புதிய இருப்பு, விநியோக செலவு, ஒவ்வொரு ஆர்டருக்கும் பின்னால் உள்ளவர்கள் பற்றிய தெளிவையும் தருகிறது.",
   "Browse today's harvest": "இன்றைய அறுவடையைப் பார்க்க",
@@ -452,7 +472,8 @@ const ta: Dict = {
   "farmer payouts this week": "இந்த வார விவசாயி கொடுப்பனவுகள்",
   "MARKET UPDATE": "சந்தை நிலவரம்",
   "Fresh lots added all day": "நாள் முழுவதும் புதிய தொகுதிகள் சேரும்",
-  "Compare quality, source, and price before buying": "வாங்கும் முன் தரம், மூலம், விலையை ஒப்பிடுங்கள்",
+  "Compare quality, source, and price before buying":
+    "வாங்கும் முன் தரம், மூலம், விலையை ஒப்பிடுங்கள்",
   "Fresh off the field": "வயலில் இருந்து புதிதாக",
   "Market board": "சந்தை பலகை",
   "See all listings →": "அனைத்து பட்டியல்களையும் காண →",
@@ -465,9 +486,11 @@ const ta: Dict = {
   "Tracked lifecycle": "கண்காணிக்கப்பட்ட வாழ்க்கைச் சுழற்சி",
   "From harvest pack to hand-off to delivery, every update is visible.":
     "அறுவடை-பொதியிலிருந்து ஒப்படைப்பு முதல் விநியோகம் வரை ஒவ்வொரு புதுப்பிப்பும் தெரியும்.",
-  "Live farm inventory · Hyderabad region": "நேரடி பண்ணை இருப்பு · ஹைதராபாத் பகுதி",
+  "Live farm inventory · Hyderabad region":
+    "நேரடி பண்ணை இருப்பு · ஹைதராபாத் பகுதி",
   "Buy closer to the source.": "மூலத்திற்கு அருகில் வாங்குங்கள்.",
-  "Try: fresh tomatoes under ₹30/kg near Hyderabad": "முயலுங்கள்: ஹைதராபாத் அருகில் ₹30/கிலோவுக்குள் புதிய தக்காளி",
+  "Try: fresh tomatoes under ₹30/kg near Hyderabad":
+    "முயலுங்கள்: ஹைதராபாத் அருகில் ₹30/கிலோவுக்குள் புதிய தக்காளி",
   "Best match": "சிறந்த பொருத்தம்",
   "Price: low to high": "விலை: குறைவு முதல் அதிகம்",
   Distance: "தூரம்",
@@ -484,7 +507,8 @@ const ta: Dict = {
   "Adjust quantities, remove items, or continue to a final server-side stock check.":
     "அளவுகளை மாற்றுங்கள், உருப்படிகளை நீக்குங்கள் அல்லது இறுதி இருப்பு சரிபார்ப்புக்கு தொடருங்கள்.",
   "Your cart is empty.": "உங்கள் கூடை காலியாக உள்ளது.",
-  "Pick freshly listed produce from the market board.": "சந்தை பலகையில் இருந்து புதிய விளைபொருட்களைத் தேர்ந்தெடுங்கள்.",
+  "Pick freshly listed produce from the market board.":
+    "சந்தை பலகையில் இருந்து புதிய விளைபொருட்களைத் தேர்ந்தெடுங்கள்.",
   "Browse marketplace": "சந்தையைப் பார்க்க",
   "Order summary": "ஆர்டர் சுருக்கம்",
   Produce: "விளைபொருள்",
@@ -498,7 +522,8 @@ const ta: Dict = {
   "Tomorrow · 9–12": "நாளை · 9–12",
   "Tomorrow · 2–5": "நாளை · 2–5",
   Payment: "கட்டணம்",
-  "Demo checkout — no payment details are stored.": "டெமோ செக்அவுட் — கட்டண விவரங்கள் சேமிக்கப்படாது.",
+  "Demo checkout — no payment details are stored.":
+    "டெமோ செக்அவுட் — கட்டண விவரங்கள் சேமிக்கப்படாது.",
   "Order placed successfully.": "ஆர்டர் வெற்றிகரமாக இடப்பட்டது.",
   "Payment record AGRPAY-90217 saved. Farmer confirmation is next.":
     "கட்டண பதிவு AGRPAY-90217 சேமிக்கப்பட்டது. அடுத்து விவசாயி உறுதிப்படுத்துவார்.",
@@ -528,7 +553,8 @@ const ta: Dict = {
   "Set location": "இடத்தை அமை",
   "Not now": "இப்போது வேண்டாம்",
   "Save location": "இடத்தைச் சேமி",
-  "Village, district, state, or pincode": "கிராமம், மாவட்டம், மாநிலம் அல்லது பின்கோடு",
+  "Village, district, state, or pincode":
+    "கிராமம், மாவட்டம், மாநிலம் அல்லது பின்கோடு",
   "Sign in": "உள்நுழை",
   "Log out": "வெளியேறு",
   "AGRLINK ACCESS": "அக்ரிலிங்க் அணுகல்",
@@ -576,7 +602,8 @@ const ta: Dict = {
   "Available until": "கிடைக்கும் (வரை)",
   "Expected price / kg": "எதிர்பார்க்கும் விலை / கிலோ",
   "Publish listing": "பட்டியலை வெளியிடு",
-  "Quantity must be greater than zero.": "அளவு பூஜ்ஜியத்தை விட அதிகமாக இருக்க வேண்டும்.",
+  "Quantity must be greater than zero.":
+    "அளவு பூஜ்ஜியத்தை விட அதிகமாக இருக்க வேண்டும்.",
   "Available-until must be after available-from and cannot be in the past.":
     "கிடைக்கும்-வரை தேதி கிடைக்கும்-முதல் தேதிக்குப் பிறகு இருக்க வேண்டும், கடந்த காலத்தில் இருக்கக்கூடாது.",
   "Regional suggested price: ₹30/kg": "பிராந்திய பரிந்துரை விலை: ₹30/கிலோ",
@@ -587,7 +614,8 @@ const ta: Dict = {
   "A transporter will be assigned after the farmer marks your order ready.":
     "விவசாயி உங்கள் ஆர்டரைத் தயார் எனக் குறித்த பிறகு போக்குவரத்தாளர் நியமிக்கப்படுவார்.",
   "DELIVERY ADDRESS": "விநியோக முகவரி",
-  "Route shown is an estimate, not live GPS.": "காட்டப்படும் வழி மதிப்பீடு மட்டுமே, நேரடி GPS அல்ல.",
+  "Route shown is an estimate, not live GPS.":
+    "காட்டப்படும் வழி மதிப்பீடு மட்டுமே, நேரடி GPS அல்ல.",
   "Publish harvest availability": "அறுவடை கிடைப்பை வெளியிடு",
   "FARMER DESK / NEW LISTING": "விவசாயி மேசை / புதிய பட்டியல்",
   "Farm location: Chevella, Telangana. Complete your profile before publishing if this is not correct.":
@@ -595,8 +623,10 @@ const ta: Dict = {
   "Agriculture field notes": "வேளாண் குறிப்புகள்",
   "Practical market, crop, and weather guidance for producers and buyers.":
     "உற்பத்தியாளர்கள், வாங்குபவர்களுக்கான சந்தை, பயிர், வானிலை நடைமுறை வழிகாட்டுதல்.",
-  "{count} live listings · data updated 8 min ago": "{count} நேரடி பட்டியல்கள் · 8 நிமிடங்களுக்கு முன் புதுப்பிக்கப்பட்டது",
-  "No produce matches those filters.": "இந்த வடிப்பான்களுக்கு எந்த விளைபொருளும் பொருந்தவில்லை.",
+  "{count} live listings · data updated 8 min ago":
+    "{count} நேரடி பட்டியல்கள் · 8 நிமிடங்களுக்கு முன் புதுப்பிக்கப்பட்டது",
+  "No produce matches those filters.":
+    "இந்த வடிப்பான்களுக்கு எந்த விளைபொருளும் பொருந்தவில்லை.",
   "Broaden your location, price, or freshness filter to see live farm stock.":
     "நேரடி பண்ணை இருப்பைக் காண இடம், விலை அல்லது புத்துணர்வு வடிப்பானை விரிவாக்குங்கள்.",
   Delete: "நீக்கு",
@@ -604,7 +634,8 @@ const ta: Dict = {
     "இந்தப் பட்டியலை நிரந்தரமாக நீக்கவா? இதைச் செயல்தவிர்க்க முடியாது.",
   "No listings yet. Publish your first harvest to appear here.":
     "இன்னும் பட்டியல்கள் இல்லை. இங்கே தோன்ற உங்கள் முதல் அறுவடையை வெளியிடுங்கள்.",
-  "Price must be greater than zero.": "விலை பூஜ்ஜியத்தை விட அதிகமாக இருக்க வேண்டும்.",
+  "Price must be greater than zero.":
+    "விலை பூஜ்ஜியத்தை விட அதிகமாக இருக்க வேண்டும்.",
   Yours: "உங்களுடையது",
   Category: "வகை",
   "Clear cart": "கூடையை காலி செய்",
@@ -631,7 +662,8 @@ const ta: Dict = {
   "Top listings by stock value": "இருப்பு மதிப்பில் முதல் பட்டியல்கள்",
   Value: "மதிப்பு",
   "AI assistant": "AI உதவியாளர்",
-  "Ask about prices, delivery, orders…": "விலை, விநியோகம், ஆர்டர்கள் பற்றி கேளுங்கள்…",
+  "Ask about prices, delivery, orders…":
+    "விலை, விநியோகம், ஆர்டர்கள் பற்றி கேளுங்கள்…",
   "Online · replies instantly": "ஆன்லைன் · உடனடி பதில்",
   "Paddy prices": "நெல் விலைகள்",
   "How to sell": "எப்படி விற்பது",
@@ -655,7 +687,8 @@ const kn: Dict = {
   "Sell produce": "ಬೆಳೆ ಮಾರಿ",
   Learn: "ಕಲಿಯಿರಿ",
   "Direct produce exchange · India": "ನೇರ ಬೆಳೆ ವಿನಿಮಯ · ಭಾರತ",
-  "Better prices start at the farm gate.": "ಉತ್ತಮ ಬೆಲೆಗಳು ಜಮೀನಿನ ಬಾಗಿಲಲ್ಲೇ ಆರಂಭವಾಗುತ್ತವೆ.",
+  "Better prices start at the farm gate.":
+    "ಉತ್ತಮ ಬೆಲೆಗಳು ಜಮೀನಿನ ಬಾಗಿಲಲ್ಲೇ ಆರಂಭವಾಗುತ್ತವೆ.",
   "AgriLink gives farmers control of inventory and buyers a clear view of fresh stock, delivery cost, and the people behind every order.":
     "AgriLink ರೈತರಿಗೆ ದಾಸ್ತಾನು ನಿಯಂತ್ರಣ ನೀಡುತ್ತದೆ, ಖರೀದಿದಾರರಿಗೆ ತಾಜಾ ಸ್ಟಾಕ್, ವಿತರಣಾ ವೆಚ್ಚ, ಪ್ರತಿ ಆರ್ಡರ್ ಹಿಂದಿನ ಜನರ ಸ್ಪಷ್ಟ ಮಾಹಿತಿ ನೀಡುತ್ತದೆ.",
   "Browse today's harvest": "ಇಂದಿನ ಬೆಳೆಯನ್ನು ನೋಡಿ",
@@ -664,7 +697,8 @@ const kn: Dict = {
   "farmer payouts this week": "ಈ ವಾರದ ರೈತ ಪಾವತಿಗಳು",
   "MARKET UPDATE": "ಮಾರುಕಟ್ಟೆ ಅಪ್‌ಡೇಟ್",
   "Fresh lots added all day": "ದಿನವಿಡೀ ತಾಜಾ ಲಾಟ್‌ಗಳು ಸೇರುತ್ತವೆ",
-  "Compare quality, source, and price before buying": "ಖರೀದಿಸುವ ಮೊದಲು ಗುಣಮಟ್ಟ, ಮೂಲ, ಬೆಲೆಯನ್ನು ಹೋಲಿಸಿ",
+  "Compare quality, source, and price before buying":
+    "ಖರೀದಿಸುವ ಮೊದಲು ಗುಣಮಟ್ಟ, ಮೂಲ, ಬೆಲೆಯನ್ನು ಹೋಲಿಸಿ",
   "Fresh off the field": "ಹೊಲದಿಂದ ತಾಜಾ",
   "Market board": "ಮಾರುಕಟ್ಟೆ ಮಂಡಳಿ",
   "See all listings →": "ಎಲ್ಲಾ ಪಟ್ಟಿಗಳನ್ನು ನೋಡಿ →",
@@ -677,9 +711,11 @@ const kn: Dict = {
   "Tracked lifecycle": "ಟ್ರ್ಯಾಕ್ ಮಾಡಿದ ಜೀವನಚಕ್ರ",
   "From harvest pack to hand-off to delivery, every update is visible.":
     "ಕೊಯ್ಲು-ಪ್ಯಾಕಿಂಗ್‌ನಿಂದ ಹಸ್ತಾಂತರದಿಂದ ವಿತರಣೆಯವರೆಗೆ ಪ್ರತಿ ಅಪ್‌ಡೇಟ್ ಕಾಣುತ್ತದೆ.",
-  "Live farm inventory · Hyderabad region": "ಲೈವ್ ಫಾರ್ಮ್ ದಾಸ್ತಾನು · ಹೈದರಾಬಾದ್ ಪ್ರದೇಶ",
+  "Live farm inventory · Hyderabad region":
+    "ಲೈವ್ ಫಾರ್ಮ್ ದಾಸ್ತಾನು · ಹೈದರಾಬಾದ್ ಪ್ರದೇಶ",
   "Buy closer to the source.": "ಮೂಲಕ್ಕೆ ಹತ್ತಿರದಿಂದ ಖರೀದಿಸಿ.",
-  "Try: fresh tomatoes under ₹30/kg near Hyderabad": "ಪ್ರಯತ್ನಿಸಿ: ಹೈದರಾಬಾದ್ ಬಳಿ ₹30/ಕಿಲೋ ಒಳಗೆ ತಾಜಾ ಟೊಮೆಟೊ",
+  "Try: fresh tomatoes under ₹30/kg near Hyderabad":
+    "ಪ್ರಯತ್ನಿಸಿ: ಹೈದರಾಬಾದ್ ಬಳಿ ₹30/ಕಿಲೋ ಒಳಗೆ ತಾಜಾ ಟೊಮೆಟೊ",
   "Best match": "ಉತ್ತಮ ಹೊಂದಾಣಿಕೆ",
   "Price: low to high": "ಬೆಲೆ: ಕಡಿಮೆಯಿಂದ ಹೆಚ್ಚು",
   Distance: "ದೂರ",
@@ -696,7 +732,8 @@ const kn: Dict = {
   "Adjust quantities, remove items, or continue to a final server-side stock check.":
     "ಪ್ರಮಾಣ ಬದಲಿಸಿ, ವಸ್ತುಗಳನ್ನು ತೆಗೆದುಹಾಕಿ ಅಥವಾ ಅಂತಿಮ ಸ್ಟಾಕ್ ಪರಿಶೀಲನೆಗೆ ಮುಂದುವರಿಯಿರಿ.",
   "Your cart is empty.": "ನಿಮ್ಮ ಬುಟ್ಟಿ ಖಾಲಿಯಿದೆ.",
-  "Pick freshly listed produce from the market board.": "ಮಾರುಕಟ್ಟೆ ಮಂಡಳಿಯಿಂದ ತಾಜಾ ಬೆಳೆಯನ್ನು ಆರಿಸಿ.",
+  "Pick freshly listed produce from the market board.":
+    "ಮಾರುಕಟ್ಟೆ ಮಂಡಳಿಯಿಂದ ತಾಜಾ ಬೆಳೆಯನ್ನು ಆರಿಸಿ.",
   "Browse marketplace": "ಮಾರುಕಟ್ಟೆ ನೋಡಿ",
   "Order summary": "ಆರ್ಡರ್ ಸಾರಾಂಶ",
   Produce: "ಬೆಳೆ",
@@ -710,7 +747,8 @@ const kn: Dict = {
   "Tomorrow · 9–12": "ನಾಳೆ · 9–12",
   "Tomorrow · 2–5": "ನಾಳೆ · 2–5",
   Payment: "ಪಾವತಿ",
-  "Demo checkout — no payment details are stored.": "ಡೆಮೊ ಚೆಕ್‌ಔಟ್ — ಪಾವತಿ ವಿವರಗಳನ್ನು ಸಂಗ್ರಹಿಸಲಾಗುವುದಿಲ್ಲ.",
+  "Demo checkout — no payment details are stored.":
+    "ಡೆಮೊ ಚೆಕ್‌ಔಟ್ — ಪಾವತಿ ವಿವರಗಳನ್ನು ಸಂಗ್ರಹಿಸಲಾಗುವುದಿಲ್ಲ.",
   "Order placed successfully.": "ಆರ್ಡರ್ ಯಶಸ್ವಿಯಾಗಿ ನೀಡಲಾಗಿದೆ.",
   "Payment record AGRPAY-90217 saved. Farmer confirmation is next.":
     "ಪಾವತಿ ದಾಖಲೆ AGRPAY-90217 ಉಳಿಸಲಾಗಿದೆ. ಮುಂದೆ ರೈತರ ದೃಢೀಕರಣ.",
@@ -799,7 +837,8 @@ const kn: Dict = {
   "A transporter will be assigned after the farmer marks your order ready.":
     "ರೈತರು ನಿಮ್ಮ ಆರ್ಡರ್ ಸಿದ್ಧ ಎಂದು ಗುರುತಿಸಿದ ನಂತರ ಸಾಗಣೆದಾರರನ್ನು ನಿಯೋಜಿಸಲಾಗುತ್ತದೆ.",
   "DELIVERY ADDRESS": "ವಿತರಣಾ ವಿಳಾಸ",
-  "Route shown is an estimate, not live GPS.": "ತೋರಿಸಿದ ಮಾರ್ಗ ಅಂದಾಜು ಮಾತ್ರ, ಲೈವ್ GPS ಅಲ್ಲ.",
+  "Route shown is an estimate, not live GPS.":
+    "ತೋರಿಸಿದ ಮಾರ್ಗ ಅಂದಾಜು ಮಾತ್ರ, ಲೈವ್ GPS ಅಲ್ಲ.",
   "Publish harvest availability": "ಬೆಳೆ ಲಭ್ಯತೆ ಪ್ರಕಟಿಸಿ",
   "FARMER DESK / NEW LISTING": "ರೈತ ಡೆಸ್ಕ್ / ಹೊಸ ಪಟ್ಟಿ",
   "Farm location: Chevella, Telangana. Complete your profile before publishing if this is not correct.":
@@ -807,8 +846,10 @@ const kn: Dict = {
   "Agriculture field notes": "ಕೃಷಿ ಟಿಪ್ಪಣಿಗಳು",
   "Practical market, crop, and weather guidance for producers and buyers.":
     "ಉತ್ಪಾದಕರು, ಖರೀದಿದಾರರಿಗೆ ಮಾರುಕಟ್ಟೆ, ಬೆಳೆ, ಹವಾಮಾನ ಪ್ರಾಯೋಗಿಕ ಮಾರ್ಗದರ್ಶನ.",
-  "{count} live listings · data updated 8 min ago": "{count} ಲೈವ್ ಪಟ್ಟಿಗಳು · 8 ನಿಮಿಷಗಳ ಹಿಂದೆ ನವೀಕರಿಸಲಾಗಿದೆ",
-  "No produce matches those filters.": "ಈ ಫಿಲ್ಟರ್‌ಗಳಿಗೆ ಯಾವುದೇ ಬೆಳೆ ಹೊಂದಿಕೆಯಾಗಲಿಲ್ಲ.",
+  "{count} live listings · data updated 8 min ago":
+    "{count} ಲೈವ್ ಪಟ್ಟಿಗಳು · 8 ನಿಮಿಷಗಳ ಹಿಂದೆ ನವೀಕರಿಸಲಾಗಿದೆ",
+  "No produce matches those filters.":
+    "ಈ ಫಿಲ್ಟರ್‌ಗಳಿಗೆ ಯಾವುದೇ ಬೆಳೆ ಹೊಂದಿಕೆಯಾಗಲಿಲ್ಲ.",
   "Broaden your location, price, or freshness filter to see live farm stock.":
     "ಲೈವ್ ಫಾರ್ಮ್ ಸ್ಟಾಕ್ ನೋಡಲು ಸ್ಥಳ, ಬೆಲೆ ಅಥವಾ ತಾಜಾತನ ಫಿಲ್ಟರ್ ವಿಸ್ತರಿಸಿ.",
   Delete: "ಅಳಿಸಿ",
@@ -867,7 +908,8 @@ const mr: Dict = {
   "Sell produce": "शेतमाल विका",
   Learn: "शिका",
   "Direct produce exchange · India": "थेट शेतमाल विनिमय · भारत",
-  "Better prices start at the farm gate.": "चांगले भाव शेताच्या दारातूनच सुरू होतात.",
+  "Better prices start at the farm gate.":
+    "चांगले भाव शेताच्या दारातूनच सुरू होतात.",
   "AgriLink gives farmers control of inventory and buyers a clear view of fresh stock, delivery cost, and the people behind every order.":
     "AgriLink शेतकऱ्यांना साठ्यावर नियंत्रण देते आणि खरेदीदारांना ताजा साठा, वितरण खर्च व प्रत्येक ऑर्डरमागील लोकांची स्पष्ट माहिती देते.",
   "Browse today's harvest": "आजचा शेतमाल पहा",
@@ -876,7 +918,8 @@ const mr: Dict = {
   "farmer payouts this week": "या आठवड्यातील शेतकरी देयके",
   "MARKET UPDATE": "बाजार अपडेट",
   "Fresh lots added all day": "दिवसभर ताजे लॉट जोडले जातात",
-  "Compare quality, source, and price before buying": "खरेदीपूर्वी गुणवत्ता, स्रोत आणि किंमत तुलना करा",
+  "Compare quality, source, and price before buying":
+    "खरेदीपूर्वी गुणवत्ता, स्रोत आणि किंमत तुलना करा",
   "Fresh off the field": "शेतातून ताजे",
   "Market board": "बाजार फलक",
   "See all listings →": "सर्व सूची पहा →",
@@ -889,9 +932,11 @@ const mr: Dict = {
   "Tracked lifecycle": "ट्रॅक केलेले जीवनचक्र",
   "From harvest pack to hand-off to delivery, every update is visible.":
     "काढणी-पॅकिंगपासून हस्तांतरापासून वितरणापर्यंत प्रत्येक अपडेट दिसते.",
-  "Live farm inventory · Hyderabad region": "लाइव्ह फार्म साठा · हैदराबाद प्रदेश",
+  "Live farm inventory · Hyderabad region":
+    "लाइव्ह फार्म साठा · हैदराबाद प्रदेश",
   "Buy closer to the source.": "उगमाच्या जवळून खरेदी करा.",
-  "Try: fresh tomatoes under ₹30/kg near Hyderabad": "करून पहा: हैदराबादजवळ ₹30/किलोखालील ताजे टोमॅटो",
+  "Try: fresh tomatoes under ₹30/kg near Hyderabad":
+    "करून पहा: हैदराबादजवळ ₹30/किलोखालील ताजे टोमॅटो",
   "Best match": "सर्वोत्तम जुळणी",
   "Price: low to high": "किंमत: कमी ते जास्त",
   Distance: "अंतर",
@@ -908,7 +953,8 @@ const mr: Dict = {
   "Adjust quantities, remove items, or continue to a final server-side stock check.":
     "प्रमाण बदला, वस्तू काढा किंवा अंतिम साठा तपासणीकडे जा.",
   "Your cart is empty.": "तुमची टोपली रिकामी आहे.",
-  "Pick freshly listed produce from the market board.": "बाजार फलकावरील ताजा शेतमाल निवडा.",
+  "Pick freshly listed produce from the market board.":
+    "बाजार फलकावरील ताजा शेतमाल निवडा.",
   "Browse marketplace": "बाजार पहा",
   "Order summary": "ऑर्डर सारांश",
   Produce: "शेतमाल",
@@ -922,7 +968,8 @@ const mr: Dict = {
   "Tomorrow · 9–12": "उद्या · 9–12",
   "Tomorrow · 2–5": "उद्या · 2–5",
   Payment: "पेमेंट",
-  "Demo checkout — no payment details are stored.": "डेमो चेकआउट — पेमेंट तपशील साठवले जात नाहीत.",
+  "Demo checkout — no payment details are stored.":
+    "डेमो चेकआउट — पेमेंट तपशील साठवले जात नाहीत.",
   "Order placed successfully.": "ऑर्डर यशस्वीरित्या नोंदवली.",
   "Payment record AGRPAY-90217 saved. Farmer confirmation is next.":
     "पेमेंट रेकॉर्ड AGRPAY-90217 जतन केले. पुढे शेतकऱ्याची पुष्टी.",
@@ -1011,7 +1058,8 @@ const mr: Dict = {
   "A transporter will be assigned after the farmer marks your order ready.":
     "शेतकऱ्याने तुमची ऑर्डर तयार म्हणून नोंदवल्यावर वाहतूकदार नेमला जाईल.",
   "DELIVERY ADDRESS": "वितरण पत्ता",
-  "Route shown is an estimate, not live GPS.": "दाखवलेला मार्ग अंदाज आहे, लाइव्ह GPS नाही.",
+  "Route shown is an estimate, not live GPS.":
+    "दाखवलेला मार्ग अंदाज आहे, लाइव्ह GPS नाही.",
   "Publish harvest availability": "पीक उपलब्धता प्रसिद्ध करा",
   "FARMER DESK / NEW LISTING": "शेतकरी डेस्क / नवीन सूची",
   "Farm location: Chevella, Telangana. Complete your profile before publishing if this is not correct.":
@@ -1019,7 +1067,8 @@ const mr: Dict = {
   "Agriculture field notes": "कृषी नोंदी",
   "Practical market, crop, and weather guidance for producers and buyers.":
     "उत्पादक व खरेदीदारांसाठी बाजार, पीक, हवामान व्यावहारिक मार्गदर्शन.",
-  "{count} live listings · data updated 8 min ago": "{count} लाइव्ह सूची · 8 मिनिटांपूर्वी अपडेट",
+  "{count} live listings · data updated 8 min ago":
+    "{count} लाइव्ह सूची · 8 मिनिटांपूर्वी अपडेट",
   "No produce matches those filters.": "या फिल्टरशी कोणताही शेतमाल जुळत नाही.",
   "Broaden your location, price, or freshness filter to see live farm stock.":
     "लाइव्ह फार्म साठा पाहण्यासाठी स्थान, किंमत किंवा ताजेपणा फिल्टर विस्तारा.",
@@ -1061,8 +1110,7 @@ const mr: Dict = {
   "How to sell": "कसे विकावे",
   "Report this listing": "या सूचीची तक्रार करा",
   Reported: "तक्रार केली",
-  "Why are you reporting this listing?":
-    "तुम्ही या सूचीची तक्रार का करत आहात?",
+  "Why are you reporting this listing?": "तुम्ही या सूचीची तक्रार का करत आहात?",
   "Wrong price": "चुकीची किंमत",
   "Poor quality": "निकृष्ट दर्जा",
   "Sold out": "साठा संपला",

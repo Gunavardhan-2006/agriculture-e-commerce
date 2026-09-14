@@ -73,8 +73,7 @@ export function useCart() {
       ),
     );
 
-  const removeItem = (id: string) =>
-    saveCart(items.filter((x) => x.id !== id));
+  const removeItem = (id: string) => saveCart(items.filter((x) => x.id !== id));
 
   const clear = () => saveCart([]);
 

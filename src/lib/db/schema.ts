@@ -12,6 +12,8 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 
+export * from "./auth-schema";
+
 export const roleEnum = pgEnum("role", [
   "farmer",
   "buyer",

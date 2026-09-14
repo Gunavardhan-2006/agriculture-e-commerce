@@ -36,7 +36,9 @@ export function categoryStats(listings: Listing[]): CategoryStat[] {
 }
 
 export function topByValue(listings: Listing[], n = 6): Listing[] {
-  return [...listings].sort((a, b) => stockValue(b) - stockValue(a)).slice(0, n);
+  return [...listings]
+    .sort((a, b) => stockValue(b) - stockValue(a))
+    .slice(0, n);
 }
 
 /* ---- Market-price trend analytics (used by /analytics) ---- */
@@ -44,7 +46,20 @@ export function topByValue(listings: Listing[], n = 6): Listing[] {
 /** Fixed reference Monday so server/client renders never disagree (no hydration flicker). */
 const REF_DATE = new Date(2026, 8, 14);
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 function weekLabel(weeksAgo: number): string {
   const d = new Date(REF_DATE);
@@ -202,9 +217,9 @@ export const FEATURED_CROP_IDS = [
 export const DEFAULT_TREND_IDS = ["rice-01", "rice-02", "tom-01", "onion-01"];
 
 export function featuredCrops(): Listing[] {
-  return FEATURED_CROP_IDS.map((id) => listings.find((l) => l.id === id)!).filter(
-    Boolean,
-  );
+  return FEATURED_CROP_IDS.map(
+    (id) => listings.find((l) => l.id === id)!,
+  ).filter(Boolean);
 }
 
 export const SERIES_COLORS = [
