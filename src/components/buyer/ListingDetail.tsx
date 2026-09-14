@@ -10,6 +10,7 @@ import { DeliveryEstimateCard } from "@/components/shared/DeliveryEstimateCard";
 import { buyerCost } from "@/lib/pricing";
 import { formatCurrency } from "@/lib/utils";
 import { addToCart } from "@/lib/cart";
+import { ReportListing } from "@/components/buyer/ReportListing";
 import { useLanguage } from "@/components/shared/LanguageProvider";
 
 export function ListingDetail({ listing }: { listing: Listing }) {
@@ -122,6 +123,7 @@ export function ListingDetail({ listing }: { listing: Listing }) {
               "Minimum bulk order: 20 kg. Stock is verified again at checkout to protect against orders placed by other buyers.",
             )}
           </p>
+          <ReportListing listing={listing} />
         </aside>
       </div>
     </main>

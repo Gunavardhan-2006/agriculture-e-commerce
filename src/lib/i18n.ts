@@ -192,6 +192,38 @@ const hi: Dict = {
   "Remove from cart": "टोकरी से हटाएँ",
   "Payment did not complete. Your order is still placed; retry safely.":
     "भुगतान पूरा नहीं हुआ। आपका ऑर्डर बना हुआ है; सुरक्षित रूप से पुनः प्रयास करें।",
+  Analytics: "एनालिटिक्स",
+  "View analytics": "एनालिटिक्स देखें",
+  "Stock value overview": "स्टॉक मूल्य अवलोकन",
+  "Live market data across every visible listing.":
+    "प्रत्येक दृश्य लिस्टिंग का लाइव बाज़ार डेटा।",
+  "Total stock value": "कुल स्टॉक मूल्य",
+  "Paddy stock value": "धान स्टॉक मूल्य",
+  "Vegetables stock value": "सब्ज़ी स्टॉक मूल्य",
+  "Share of total stock": "कुल स्टॉक का हिस्सा",
+  "Paddy vs vegetables": "धान बनाम सब्ज़ियाँ",
+  "Other produce": "अन्य उपज",
+  "Stock value by category": "श्रेणी अनुसार स्टॉक मूल्य",
+  "Top listings by stock value": "स्टॉक मूल्य के शीर्ष लिस्टिंग",
+  Value: "मूल्य",
+  "AI assistant": "एआई सहायक",
+  "Ask about prices, delivery, orders…": "दाम, डिलीवरी, ऑर्डर के बारे में पूछें…",
+  "Online · replies instantly": "ऑनलाइन · तुरंत उत्तर",
+  "Paddy prices": "धान के भाव",
+  "How to sell": "कैसे बेचें",
+  "Report this listing": "इस लिस्टिंग की रिपोर्ट करें",
+  Reported: "रिपोर्ट किया गया",
+  "Why are you reporting this listing?":
+    "आप इस लिस्टिंग की रिपोर्ट क्यों कर रहे हैं?",
+  "Wrong price": "गलत मूल्य",
+  "Poor quality": "खराब गुणवत्ता",
+  "Sold out": "स्टॉक समाप्त",
+  "Spam or fraud": "स्पैम या धोखाधड़ी",
+  "Tell us more (optional)": "हमें और बताएँ (वैकल्पिक)",
+  Cancel: "रद्द करें",
+  "Submit report": "रिपोर्ट जमा करें",
+  "Thanks — our team will review this listing.":
+    "धन्यवाद — हमारी टीम इस लिस्टिंग की समीक्षा करेगी।",
 };
 
 const te: Dict = {
@@ -372,6 +404,38 @@ const te: Dict = {
   "Remove from cart": "బండి నుండి తొలగించండి",
   "Payment did not complete. Your order is still placed; retry safely.":
     "చెల్లింపు పూర్తి కాలేదు. మీ ఆర్డర్ అలాగే ఉంది; సురక్షితంగా మళ్లీ ప్రయత్నించండి.",
+  Analytics: "విశ్లేషణ",
+  "View analytics": "విశ్లేషణ చూడండి",
+  "Stock value overview": "స్టాక్ విలువ సారాంశం",
+  "Live market data across every visible listing.":
+    "ప్రతి కనిపించే జాబితా యొక్క ప్రత్యక్ష మార్కెట్ డేటా.",
+  "Total stock value": "మొత్తం స్టాక్ విలువ",
+  "Paddy stock value": "వరి స్టాక్ విలువ",
+  "Vegetables stock value": "కూరగాయల స్టాక్ విలువ",
+  "Share of total stock": "మొత్తం స్టాక్‌లో వాటా",
+  "Paddy vs vegetables": "వరి vs కూరగాయలు",
+  "Other produce": "ఇతర పంటలు",
+  "Stock value by category": "వర్గాల వారీగా స్టాక్ విలువ",
+  "Top listings by stock value": "స్టాక్ విలువ ప్రకారం అగ్ర జాబితాలు",
+  Value: "విలువ",
+  "AI assistant": "AI సహాయకుడు",
+  "Ask about prices, delivery, orders…": "ధరలు, డెలివరీ, ఆర్డర్ల గురించి అడగండి…",
+  "Online · replies instantly": "ఆన్‌లైన్ · తక్షణ సమాధానం",
+  "Paddy prices": "వరి ధరలు",
+  "How to sell": "ఎలా అమ్మాలి",
+  "Report this listing": "ఈ జాబితాను నివేదించండి",
+  Reported: "నివేదించబడింది",
+  "Why are you reporting this listing?":
+    "మీరు ఈ జాబితాను ఎందుకు నివేదిస్తున్నారు?",
+  "Wrong price": "తప్పు ధర",
+  "Poor quality": "తక్కువ నాణ్యత",
+  "Sold out": "స్టాక్ అయిపోయింది",
+  "Spam or fraud": "స్పామ్ లేదా మోసం",
+  "Tell us more (optional)": "మరింత చెప్పండి (ఐచ్ఛికం)",
+  Cancel: "రద్దు చేయండి",
+  "Submit report": "నివేదికను సమర్పించండి",
+  "Thanks — our team will review this listing.":
+    "ధన్యవాదాలు — మా బృందం ఈ జాబితాను సమీక్షిస్తుంది.",
 };
 
 const ta: Dict = {
@@ -552,6 +616,38 @@ const ta: Dict = {
   "Remove from cart": "கூடையிலிருந்து நீக்கு",
   "Payment did not complete. Your order is still placed; retry safely.":
     "கட்டணம் நிறைவடையவில்லை. உங்கள் ஆர்டர் அப்படியே உள்ளது; பாதுகாப்பாக மீண்டும் முயலுங்கள்.",
+  Analytics: "பகுப்பாய்வு",
+  "View analytics": "பகுப்பாய்வைக் காண்க",
+  "Stock value overview": "இருப்பு மதிப்பு கண்ணோட்டம்",
+  "Live market data across every visible listing.":
+    "ஒவ்வொரு பட்டியலின் நேரடி சந்தை தரவு.",
+  "Total stock value": "மொத்த இருப்பு மதிப்பு",
+  "Paddy stock value": "நெல் இருப்பு மதிப்பு",
+  "Vegetables stock value": "காய்கறி இருப்பு மதிப்பு",
+  "Share of total stock": "மொத்த இருப்பில் பங்கு",
+  "Paddy vs vegetables": "நெல் vs காய்கறிகள்",
+  "Other produce": "மற்ற விளைபொருட்கள்",
+  "Stock value by category": "வகை வாரியாக இருப்பு மதிப்பு",
+  "Top listings by stock value": "இருப்பு மதிப்பில் முதல் பட்டியல்கள்",
+  Value: "மதிப்பு",
+  "AI assistant": "AI உதவியாளர்",
+  "Ask about prices, delivery, orders…": "விலை, விநியோகம், ஆர்டர்கள் பற்றி கேளுங்கள்…",
+  "Online · replies instantly": "ஆன்லைன் · உடனடி பதில்",
+  "Paddy prices": "நெல் விலைகள்",
+  "How to sell": "எப்படி விற்பது",
+  "Report this listing": "இந்தப் பட்டியலைப் புகாரளிக்கவும்",
+  Reported: "புகாரளிக்கப்பட்டது",
+  "Why are you reporting this listing?":
+    "இந்தப் பட்டியலை ஏன் புகாரளிக்கிறீர்கள்?",
+  "Wrong price": "தவறான விலை",
+  "Poor quality": "மோசமான தரம்",
+  "Sold out": "இருப்பு தீர்ந்துவிட்டது",
+  "Spam or fraud": "ஸ்பேம் அல்லது மோசடி",
+  "Tell us more (optional)": "மேலும் கூறுங்கள் (விருப்பம்)",
+  Cancel: "ரத்து செய்",
+  "Submit report": "புகாரைச் சமர்ப்பி",
+  "Thanks — our team will review this listing.":
+    "நன்றி — எங்கள் குழு இந்தப் பட்டியலை மதிப்பாய்வு செய்யும்.",
 };
 
 const kn: Dict = {
@@ -732,6 +828,38 @@ const kn: Dict = {
   "Remove from cart": "ಬುಟ್ಟಿಯಿಂದ ತೆಗೆದುಹಾಕಿ",
   "Payment did not complete. Your order is still placed; retry safely.":
     "ಪಾವತಿ ಪೂರ್ಣಗೊಳ್ಳಲಿಲ್ಲ. ನಿಮ್ಮ ಆರ್ಡರ್ ಹಾಗೆಯೇ ಇದೆ; ಸುರಕ್ಷಿತವಾಗಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  Analytics: "ವಿಶ್ಲೇಷಣೆ",
+  "View analytics": "ವಿಶ್ಲೇಷಣೆ ನೋಡಿ",
+  "Stock value overview": "ದಾಸ್ತಾನು ಮೌಲ್ಯ ಅವಲೋಕನ",
+  "Live market data across every visible listing.":
+    "ಪ್ರತಿ ಗೋಚರ ಪಟ್ಟಿಯ ಲೈವ್ ಮಾರುಕಟ್ಟೆ ಡೇಟಾ.",
+  "Total stock value": "ಒಟ್ಟು ದಾಸ್ತಾನು ಮೌಲ್ಯ",
+  "Paddy stock value": "ಭತ್ತದ ದಾಸ್ತಾನು ಮೌಲ್ಯ",
+  "Vegetables stock value": "ತರಕಾರಿ ದಾಸ್ತಾನು ಮೌಲ್ಯ",
+  "Share of total stock": "ಒಟ್ಟು ದಾಸ್ತಾನಿನಲ್ಲಿ ಪಾಲು",
+  "Paddy vs vegetables": "ಭತ್ತ vs ತರಕಾರಿ",
+  "Other produce": "ಇತರೆ ಬೆಳೆ",
+  "Stock value by category": "ವರ್ಗವಾರು ದಾಸ್ತಾನು ಮೌಲ್ಯ",
+  "Top listings by stock value": "ದಾಸ್ತಾನು ಮೌಲ್ಯದಲ್ಲಿ ಅಗ್ರ ಪಟ್ಟಿಗಳು",
+  Value: "ಮೌಲ್ಯ",
+  "AI assistant": "AI ಸಹಾಯಕ",
+  "Ask about prices, delivery, orders…": "ಬೆಲೆ, ವಿತರಣೆ, ಆರ್ಡರ್‌ಗಳ ಬಗ್ಗೆ ಕೇಳಿ…",
+  "Online · replies instantly": "ಆನ್‌ಲೈನ್ · ತಕ್ಷಣದ ಉತ್ತರ",
+  "Paddy prices": "ಭತ್ತದ ಬೆಲೆಗಳು",
+  "How to sell": "ಹೇಗೆ ಮಾರುವುದು",
+  "Report this listing": "ಈ ಪಟ್ಟಿಯನ್ನು ವರದಿ ಮಾಡಿ",
+  Reported: "ವರದಿ ಮಾಡಲಾಗಿದೆ",
+  "Why are you reporting this listing?":
+    "ನೀವು ಈ ಪಟ್ಟಿಯನ್ನು ಏಕೆ ವರದಿ ಮಾಡುತ್ತಿದ್ದೀರಿ?",
+  "Wrong price": "ತಪ್ಪು ಬೆಲೆ",
+  "Poor quality": "ಕಳಪೆ ಗುಣಮಟ್ಟ",
+  "Sold out": "ಸ್ಟಾಕ್ ಮುಗಿದಿದೆ",
+  "Spam or fraud": "ಸ್ಪ್ಯಾಮ್ ಅಥವಾ ವಂಚನೆ",
+  "Tell us more (optional)": "ಇನ್ನಷ್ಟು ತಿಳಿಸಿ (ಐಚ್ಛಿಕ)",
+  Cancel: "ರದ್ದುಮಾಡಿ",
+  "Submit report": "ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ",
+  "Thanks — our team will review this listing.":
+    "ಧನ್ಯವಾದಗಳು — ನಮ್ಮ ತಂಡ ಈ ಪಟ್ಟಿಯನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ.",
 };
 
 const mr: Dict = {
@@ -912,6 +1040,38 @@ const mr: Dict = {
   "Remove from cart": "टोपलीतून काढा",
   "Payment did not complete. Your order is still placed; retry safely.":
     "पेमेंट पूर्ण झाले नाही. तुमची ऑर्डर कायम आहे; सुरक्षितपणे पुन्हा प्रयत्न करा.",
+  Analytics: "विश्लेषण",
+  "View analytics": "विश्लेषण पहा",
+  "Stock value overview": "साठा मूल्य आढावा",
+  "Live market data across every visible listing.":
+    "प्रत्येक दृश्य सूचीचा लाइव्ह बाजार डेटा.",
+  "Total stock value": "एकूण साठा मूल्य",
+  "Paddy stock value": "भात साठा मूल्य",
+  "Vegetables stock value": "भाज्या साठा मूल्य",
+  "Share of total stock": "एकूण साठ्यातील वाटा",
+  "Paddy vs vegetables": "भात वि. भाज्या",
+  "Other produce": "इतर शेतमाल",
+  "Stock value by category": "प्रकारानुसार साठा मूल्य",
+  "Top listings by stock value": "साठा मूल्यानुसार शीर्ष सूची",
+  Value: "मूल्य",
+  "AI assistant": "AI सहाय्यक",
+  "Ask about prices, delivery, orders…": "किंमत, वितरण, ऑर्डरबद्दल विचारा…",
+  "Online · replies instantly": "ऑनलाइन · त्वरित उत्तर",
+  "Paddy prices": "भाताचे भाव",
+  "How to sell": "कसे विकावे",
+  "Report this listing": "या सूचीची तक्रार करा",
+  Reported: "तक्रार केली",
+  "Why are you reporting this listing?":
+    "तुम्ही या सूचीची तक्रार का करत आहात?",
+  "Wrong price": "चुकीची किंमत",
+  "Poor quality": "निकृष्ट दर्जा",
+  "Sold out": "साठा संपला",
+  "Spam or fraud": "स्पॅम किंवा फसवणूक",
+  "Tell us more (optional)": "अधिक सांगा (पर्यायी)",
+  Cancel: "रद्द करा",
+  "Submit report": "तक्रार सादर करा",
+  "Thanks — our team will review this listing.":
+    "धन्यवाद — आमची टीम या सूचीचे पुनरावलोकन करेल.",
 };
 
 export const dictionaries: Record<LanguageCode, Dict> = {

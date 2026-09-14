@@ -1,0 +1,1 @@
+import { Navbar } from "@/components/shared/Navbar"; import { AnalyticsDashboard } from "@/components/farmer/AnalyticsDashboard"; export default function Analytics(){return <><Navbar/><AnalyticsDashboard/></>}

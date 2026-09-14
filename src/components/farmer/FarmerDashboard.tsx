@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   AlertTriangle,
   ArrowUpRight,
+  BarChart3,
   Package,
   Plus,
   Trash2,
@@ -54,12 +55,20 @@ export function FarmerDashboard() {
             )}
           </p>
         </div>
-        <Link
-          href="/dashboard/listings/new"
-          className="inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-4 py-3 text-sm font-bold text-white"
-        >
-          <Plus size={17} /> {t("New listing")}
-        </Link>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/dashboard/analytics"
+            className="inline-flex items-center gap-2 rounded-lg border border-emerald-700 px-4 py-3 text-sm font-bold text-emerald-800 dark:text-emerald-300"
+          >
+            <BarChart3 size={17} /> {t("View analytics")}
+          </Link>
+          <Link
+            href="/dashboard/listings/new"
+            className="inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-4 py-3 text-sm font-bold text-white"
+          >
+            <Plus size={17} /> {t("New listing")}
+          </Link>
+        </div>
       </div>
       <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map(({ Icon, value, label }) => (

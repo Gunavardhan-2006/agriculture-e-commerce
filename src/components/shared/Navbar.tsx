@@ -7,6 +7,7 @@ import { AuthControl } from "./AuthControl";
 import { CartControl } from "./CartControl";
 import { LanguageSelector } from "./LanguageSelector";
 import { LocationPrompt } from "@/components/marketing/LocationPrompt";
+import { AssistantChat } from "./AssistantChat";
 import { useLanguage } from "./LanguageProvider";
 
 export function Navbar() {
@@ -42,6 +43,7 @@ export function Navbar() {
         </div>
       </header>
       <LocationPrompt />
+      <AssistantChat />
     </>
   );
 }

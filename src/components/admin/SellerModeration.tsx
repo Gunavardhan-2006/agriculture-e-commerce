@@ -17,6 +17,11 @@ import {
   getBlockedIds,
   unblockListingById,
 } from "@/lib/listings-store";
+import {
+  REPORTS_EVENT,
+  getReportCounts,
+  getReports,
+} from "@/lib/reports";
 import { formatCurrency } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -55,15 +60,23 @@ export function SellerModeration() {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const [blockedIds, setBlockedIds] = useState<string[]>(() => getBlockedIds());
   const blocked = useMemo(() => new Set(blockedIds), [blockedIds]);
+  const [reportCounts, setReportCounts] = useState<Record<string, number>>(() =>
+    getReportCounts(),
+  );
 
   // Keep block badges live when products are blocked/unblocked (any tab).
   useEffect(() => {
-    const refresh = () => setBlockedIds(getBlockedIds());
+    const refresh = () => {
+      setBlockedIds(getBlockedIds());
+      setReportCounts(getReportCounts());
+    };
     window.addEventListener(LISTINGS_EVENT, refresh);
+    window.addEventListener(REPORTS_EVENT, refresh);
     window.addEventListener("storage", refresh);
     window.addEventListener("focus", refresh);
     return () => {
       window.removeEventListener(LISTINGS_EVENT, refresh);
+      window.removeEventListener(REPORTS_EVENT, refresh);
       window.removeEventListener("storage", refresh);
       window.removeEventListener("focus", refresh);
     };
@@ -152,6 +165,7 @@ export function SellerModeration() {
                         <th className="px-3 py-2">Baseline</th>
                         <th className="px-3 py-2">Harvest</th>
                         <th className="px-3 py-2">Delivery</th>
+                        <th className="px-3 py-2">Reports</th>
                         <th className="px-3 py-2">Visibility</th>
                       </tr>
                     </thead>
@@ -160,6 +174,13 @@ export function SellerModeration() {
                         const pct = diffPct(item);
                         const over = item.price > item.suggested * 1.08;
                         const isBlocked = blocked.has(item.id);
+                        const reports = reportCounts[item.id] ?? 0;
+                        const reportReasons = reports
+                          ? getReports()
+                              .filter((r) => r.listingId === item.id)
+                              .map((r) => r.reason)
+                              .join(", ")
+                          : "";
                         return (
                           <tr key={item.id} className={isBlocked ? "opacity-60" : ""}>
                             <td className="px-3 py-2">
@@ -193,6 +214,20 @@ export function SellerModeration() {
                             <td className="px-3 py-2 font-mono text-xs">{item.harvest}</td>
                             <td className="px-3 py-2 font-mono text-xs">
                               {item.delivery.join(", ")}
+                            </td>
+                            <td className="px-3 py-2">
+                              {reports > 0 ? (
+                                <span
+                                  title={reportReasons}
+                                  className="inline-flex items-center rounded bg-amber-100 px-2 py-1 font-mono text-[11px] font-bold text-amber-900"
+                                >
+                                  {reports} REPORT{reports > 1 ? "S" : ""}
+                                </span>
+                              ) : (
+                                <span className="font-mono text-xs text-slate-400 dark:text-neutral-500">
+                                  —
+                                </span>
+                              )}
                             </td>
                             <td className="px-3 py-2">
                               {isBlocked ? (
