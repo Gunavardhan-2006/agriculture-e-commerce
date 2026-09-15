@@ -146,6 +146,7 @@ export type NewListingInput = {
   unit: string;
   grade: string;
   price: number;
+  phone: string;
   availableUntil: string;
 };
 
@@ -160,6 +161,7 @@ export function addMyListing(input: NewListingInput): Listing {
     price: input.price,
     suggested: input.price,
     farmer: currentFarmerName(),
+    phone: input.phone.trim() || "+91 90000 00000",
     village: "Chevella, Telangana",
     distance: 12,
     rating: 5,

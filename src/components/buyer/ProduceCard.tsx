@@ -14,7 +14,7 @@ export function ProduceCard({ listing }: { listing: Listing }) {
   return (
     <Link
       href={`/marketplace/${listing.id}`}
-      className="group overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-emerald-700"
+      className="group overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm transition hover:border-emerald-400 hover:shadow-lg hover:ring-1 hover:ring-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-emerald-600 dark:hover:ring-emerald-900"
     >
       <div className="relative h-44 overflow-hidden">
         <ImageWithFallback

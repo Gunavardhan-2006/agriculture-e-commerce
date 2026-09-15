@@ -45,13 +45,13 @@ export function LanguageSelector() {
         aria-expanded={open}
         aria-label={t("Choose language")}
         title={t("Choose language")}
-        className="flex items-center gap-1.5 rounded-lg border border-stone-300 px-2 py-2 text-xs font-bold text-slate-700 transition hover:border-emerald-600 hover:text-emerald-800 dark:border-neutral-700 dark:text-stone-200 dark:hover:border-emerald-500 dark:hover:text-emerald-300"
+        className="flex h-9 items-center gap-1.5 rounded-lg border border-stone-300 px-2.5 text-xs font-bold text-slate-700 transition hover:border-emerald-600 hover:text-emerald-800 dark:border-neutral-700 dark:text-stone-200 dark:hover:border-emerald-500 dark:hover:text-emerald-300"
       >
-        <Languages size={15} />
-        <span className="min-w-6 text-center">{active.short}</span>
+        <Languages size={15} className="shrink-0" />
+        <span className="w-7 text-center leading-none">{active.short}</span>
         <ChevronDown
           size={13}
-          className={`transition-transform ${open ? "rotate-180" : ""}`}
+          className={`shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
 

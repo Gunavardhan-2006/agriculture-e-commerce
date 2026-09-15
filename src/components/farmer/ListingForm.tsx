@@ -38,6 +38,7 @@ export function ListingForm() {
       unit: String(form.get("unit") ?? "kg"),
       grade: String(form.get("grade") ?? "Grade A"),
       price,
+      phone: String(form.get("phone") ?? ""),
       availableUntil: until,
     });
     router.push("/dashboard");
@@ -118,18 +119,30 @@ export function ListingForm() {
           />
         </label>
       </div>
-      <label className="text-sm font-semibold">
-        {t("Expected price / kg")}
-        <input
-          name="price"
-          type="number"
-          defaultValue="28"
-          className="mt-2 w-full rounded-lg border border-slate-300 p-3 font-normal"
-        />
-        <span className="mt-2 block font-mono text-xs text-emerald-800">
-          {t("Regional suggested price: ₹30/kg")}
-        </span>
-      </label>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <label className="text-sm font-semibold">
+          {t("Contact number")}
+          <input
+            name="phone"
+            type="tel"
+            defaultValue="+91 90000 00000"
+            placeholder="+91 xxxxx xxxxx"
+            className="mt-2 w-full rounded-lg border border-slate-300 p-3 font-normal"
+          />
+        </label>
+        <label className="text-sm font-semibold">
+          {t("Expected price / kg")}
+          <input
+            name="price"
+            type="number"
+            defaultValue="28"
+            className="mt-2 w-full rounded-lg border border-slate-300 p-3 font-normal"
+          />
+          <span className="mt-2 block font-mono text-xs text-emerald-800">
+            {t("Regional suggested price: ₹30/kg")}
+          </span>
+        </label>
+      </div>
       <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-950">
         {t(
           "Farm location: Chevella, Telangana. Complete your profile before publishing if this is not correct.",

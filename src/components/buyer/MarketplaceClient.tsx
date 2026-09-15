@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { ChevronDown, Search, SlidersHorizontal } from "lucide-react";
 import { categories } from "@/lib/demo-data";
 import { useListings } from "@/lib/useListings";
 import { parseMarketSearch } from "@/lib/search";
@@ -28,12 +28,17 @@ export function MarketplaceClient() {
       .trim()
       .split(/\s+/)
       .filter(Boolean);
+    const matchesCategory = (item: (typeof listings)[number]) =>
+      activeCategory === "Rice"
+        ? item.category === "Grains" &&
+          /rice|paddy|basmati|sona/i.test(item.variety)
+        : !activeCategory || item.category === activeCategory;
     return listings
       .filter((item) => {
         const text =
           `${item.variety} ${item.category} ${item.farmer} ${item.village}`.toLowerCase();
         return (
-          (!activeCategory || item.category === activeCategory) &&
+          matchesCategory(item) &&
           (!parsed.priceCeiling || item.price <= parsed.priceCeiling) &&
           (!plainTerms.length ||
             plainTerms.some((term) => text.includes(term)))
@@ -72,17 +77,24 @@ export function MarketplaceClient() {
                 className="w-full bg-transparent text-sm outline-none"
               />
             </label>
-            <select
-              value={sort}
-              onChange={(e) => setSort(e.target.value)}
-              className="h-12 rounded-lg border border-slate-300 bg-white px-3 text-sm font-semibold dark:border-neutral-700 dark:bg-neutral-900"
-            >
-              {sortOptions.map((option) => (
-                <option key={option} value={option}>
-                  {t(option)}
-                </option>
-              ))}
-            </select>
+            <label className="relative flex-shrink-0">
+              <select
+                value={sort}
+                onChange={(e) => setSort(e.target.value)}
+                className="h-12 appearance-none rounded-lg border border-slate-300 bg-white py-0 pl-4 pr-10 text-sm font-semibold text-slate-800 dark:border-neutral-700 dark:bg-neutral-900 dark:text-stone-100"
+              >
+                {sortOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {t(option)}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown
+                size={16}
+                aria-hidden
+                className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 dark:text-neutral-400"
+              />
+            </label>
           </div>
         </div>
       </section>

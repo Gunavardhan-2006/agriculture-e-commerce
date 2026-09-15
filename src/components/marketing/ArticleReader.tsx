@@ -180,7 +180,7 @@ export function ArticleReader() {
               const RIcon = ICONS[r.icon] ?? BookOpen;
               return (
                 <Link key={r.slug} href={`/articles/${r.slug}?lang=${language}`} className="group">
-                  <Card className="h-full p-4 group-hover:shadow-md">
+                  <Card className="h-full p-4 transition group-hover:border-emerald-300 group-hover:shadow-md">
                     <RIcon size={18} className="text-emerald-700 dark:text-emerald-400" />
                     <p className="mt-3 text-sm font-bold leading-5 group-hover:underline">
                       {rtr.title}

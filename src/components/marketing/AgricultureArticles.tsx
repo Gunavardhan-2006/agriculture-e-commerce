@@ -178,7 +178,7 @@ export function AgricultureArticles() {
                 href={`/articles/${article.slug}?lang=${language}`}
                 className="group block rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
               >
-                <Card className="flex h-full flex-col p-5 transition group-hover:-translate-y-0.5 group-hover:shadow-md">
+                <Card className="flex h-full flex-col p-5 transition group-hover:border-emerald-300 group-hover:shadow-md">
                   <div className="flex items-center justify-between">
                     <Icon className="text-emerald-700 dark:text-emerald-400" />
                     <span className="rounded-full bg-emerald-50 px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-wide text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200">

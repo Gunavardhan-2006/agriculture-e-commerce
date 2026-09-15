@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { MessageCircle, Minus, Plus, ShoppingBasket } from "lucide-react";
+import { MessageCircle, Minus, Phone, Plus, ShoppingBasket } from "lucide-react";
 import type { Listing } from "@/types";
 import { ImageWithFallback } from "@/components/shared/ImageWithFallback";
 import { RatingStars } from "@/components/shared/RatingStars";
@@ -76,6 +76,22 @@ export function ListingDetail({ listing }: { listing: Listing }) {
               </div>
               <RatingStars rating={listing.rating} />
             </div>
+            <div className="mt-3 flex items-center gap-2 border-t border-stone-100 pt-3 dark:border-neutral-800">
+              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                <Phone size={14} />
+              </span>
+              <div className="min-w-0">
+                <p className="text-[10px] font-mono uppercase tracking-wide text-slate-500 dark:text-neutral-400">
+                  {t("Seller phone · bulk orders")}
+                </p>
+                <a
+                  href={`tel:${listing.phone.replace(/[^+\d]/g, "")}`}
+                  className="font-mono text-sm font-bold text-emerald-800 hover:underline dark:text-emerald-300"
+                >
+                  {listing.phone}
+                </a>
+              </div>
+            </div>
           </div>
           <div className="mt-4">
             <DeliveryEstimateCard
@@ -123,6 +139,13 @@ export function ListingDetail({ listing }: { listing: Listing }) {
               "Minimum bulk order: 20 kg. Stock is verified again at checkout to protect against orders placed by other buyers.",
             )}
           </p>
+          <a
+            href={`tel:${listing.phone.replace(/[^+\d]/g, "")}`}
+            className="mt-3 flex items-center justify-center gap-2 rounded-lg border border-emerald-300 bg-emerald-50 px-4 py-2.5 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 dark:hover:bg-emerald-900"
+          >
+            <Phone size={16} />
+            {t("Call seller for bulk orders")} · {listing.phone}
+          </a>
           <ReportListing listing={listing} />
         </aside>
       </div>
